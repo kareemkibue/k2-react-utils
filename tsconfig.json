@@ -1,5 +1,5 @@
 {
-    "compilerOptions": {        
+    "compilerOptions": {
         "sourceMap": true,
         "noImplicitAny": false,
         "module": "es6",
@@ -12,7 +12,8 @@
             "es2015",
             "es2017",
             "dom"
-        ]
+        ],
+        "jsx": "react"
     },
     "exclude": [
         "node_modules"
