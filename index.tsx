@@ -5,8 +5,16 @@ export function connect(mapStateToProps: any, mapDispatchToProps?: any, mergePro
     return (target: any) => (connectReactRedux(mapStateToProps, mapDispatchToProps, mergeProps, options)(target) as any);
 }
 
-export class Content extends React.Component<{ text: string }, {}> {
-    props;
+interface IContentProps {
+    text: string
+}
+
+interface ISVGProps {
+    icon: string
+}
+
+export class Content extends React.Component<IContentProps, {}> {
+    props: IContentProps;
 
     private parseMarkup(rawHtml: string) {
         return { __html: rawHtml };
@@ -30,8 +38,8 @@ export function classify(classObject: any): string {
 }
 
 
-export class SVG extends React.Component<{ icon: string }, {}> {
-    props;
+export class SVG extends React.Component<ISVGProps, {}> {
+    props: ISVGProps;
 
     render() {
         return (<svg className="ico" >
