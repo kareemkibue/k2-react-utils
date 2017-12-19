@@ -1,0 +1,12 @@
+{
+  "name": "kk-react-utils",
+  "version": "0.1.0",
+  "description": "React Utils",
+  "main": "index.tsx",
+  "author": "Kareem Kibue",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-redux": "^5.0.6"
+  }
+}
