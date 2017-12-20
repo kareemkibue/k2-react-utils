@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+/**
+ * Interface for SVG Props
+ */
 interface ISVGProps {
     icon: string
 }

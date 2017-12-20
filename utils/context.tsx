@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 /**
- * Content Interface
+ * Interface for Content Props
  */
 interface IContentProps {
     text: string
