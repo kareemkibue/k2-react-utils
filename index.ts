@@ -1,10 +1,10 @@
 import { classify } from './utils/classify';
 import { connect } from './utils/connect';
-import { Content } from './utils/context';
-import { SVG } from './utils/svg';
+import { Content } from './utils/Context';
+import { SVG } from './utils/Svg';
 import Parser from './utils/parser';
 
-const exports: any = {
+const Utils: any = {
     Content,
     SVG,
     classify,
@@ -12,6 +12,6 @@ const exports: any = {
     Parser
 }
 
-export { exports };
+export { Utils };
 
-export default exports;
+export default Utils;
