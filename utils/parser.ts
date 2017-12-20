@@ -1,9 +1,9 @@
-import * as xmlJs from 'xml-js';
+import * as XmlJs from 'xml-js';
 
 class Parser {
 
     xmlToJson( xmlNode: any ): any {
-        return JSON.parse( xmlJs.xml2json( xmlNode, {
+        return JSON.parse( XmlJs.xml2json( xmlNode, {
             compact: true,
             ignoreComment: true,
             spaces: 4
