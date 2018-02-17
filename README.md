@@ -1,2 +1,4 @@
-# Project Waldo
+# React Utils
 
+# Licence
+MIT
