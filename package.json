@@ -1,6 +1,6 @@
 {
     "name": "kk-react-utils",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "description": "React Utils",
     "main": "index.tsx",
     "repository": "https://github.com/kareemkibue/kk-react-utils.git",
