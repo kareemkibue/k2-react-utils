@@ -1,0 +1,21 @@
+{
+    "name": "k2-react-utils",
+    "version": "0.5.2",
+    "description": "A collection of handy React Utilities",
+    "main": "index.tsx",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kareemkibue/k2-react-utils.git"
+    },
+    "author": "Kareem Kibue <mail@kareemkibue.com>",
+    "license": "MIT",
+    "scripts": {
+        "test": ""
+    },
+    "dependencies": {
+        "react": "^16.2.0",
+        "react-redux": "^5.0.6",
+        "redux": "^3.7.2",
+        "xml-js": "^1.6.1"
+    }
+}
