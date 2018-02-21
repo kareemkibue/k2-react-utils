@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,8 +8,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
-var React = require("react");
+import * as React from 'react';
 /**
  * Content Component with HTML sanitization
  */
@@ -27,4 +25,5 @@ var Content = (function (_super) {
     };
     return Content;
 }(React.Component));
-exports.Content = Content;
+export { Content };
+//# sourceMappingURL=Context.js.map

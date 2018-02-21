@@ -1,5 +1,5 @@
-export { classify } from './utils/classify';
-export { connect } from './utils/connect';
-export { Content } from './utils/Context';
-export { SVG } from './utils/Svg';
-export { default as Parser } from './utils/parser';
+export { classify } from './src/classify';
+export { connect } from './src/connect';
+export { Content } from './src/Context';
+export { SVG } from './src/Svg';
+export { default as Parser } from './src/parser';
