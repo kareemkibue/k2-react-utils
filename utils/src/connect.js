@@ -1,8 +1,10 @@
-import { connect as connectReactRedux } from 'react-redux';
+"use strict";
+exports.__esModule = true;
+var react_redux_1 = require("react-redux");
 /**
  * React-Redux Connect implementation for Typescript
  */
-export function connect(mapStateToProps, mapDispatchToProps, mergeProps, options) {
-    return function (target) { return connectReactRedux(mapStateToProps, mapDispatchToProps, mergeProps, options)(target); };
+function connect(mapStateToProps, mapDispatchToProps, mergeProps, options) {
+    return function (target) { return react_redux_1.connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(target); };
 }
-//# sourceMappingURL=connect.js.map
+exports.connect = connect;

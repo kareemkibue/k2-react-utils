@@ -1,4 +1,6 @@
-import * as XmlJs from 'xml-js';
+"use strict";
+exports.__esModule = true;
+var XmlJs = require("xml-js");
 /**
  * A Parser utility that converts XML<=>JSON built by Nashwaan
  * XML-Js Library - https://github.com/nashwaan/xml-js
@@ -15,5 +17,4 @@ var Parser = (function () {
     };
     return Parser;
 }());
-export default new Parser();
-//# sourceMappingURL=parser.js.map
+exports["default"] = new Parser();

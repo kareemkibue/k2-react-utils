@@ -1,7 +1,9 @@
+"use strict";
+exports.__esModule = true;
 /**
  * Classify Function - Returns a list of classes after an Evalution
  */
-export function classify(classObject) {
+function classify(classObject) {
     var classList = '';
     for (var i in classObject) {
         if (classObject[i] === true)
@@ -9,4 +11,4 @@ export function classify(classObject) {
     }
     return classList.trim();
 }
-//# sourceMappingURL=classify.js.map
+exports.classify = classify;
