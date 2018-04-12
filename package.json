@@ -1,6 +1,6 @@
 {
     "name": "k2-react-utils",
-    "version": "0.5.4",
+    "version": "0.6.0",
     "description": "A collection of handy React Utilities",
     "main": "index.tsx",
     "repository": {
