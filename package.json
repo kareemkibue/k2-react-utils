@@ -1,6 +1,6 @@
 {
     "name": "k2-react-utils",
-    "version": "0.5.4",
+    "version": "0.6.0",
     "description": "A collection of handy React Utilities",
     "main": "index.tsx",
     "repository": {
@@ -17,5 +17,9 @@
         "react-redux": "^5.0.6",
         "redux": "^3.7.2",
         "xml-js": "^1.6.1"
+    },
+    "devDependencies": {
+        "@types/react": "^16.3.9",
+        "@types/react-redux": "^5.0.16"
     }
 }

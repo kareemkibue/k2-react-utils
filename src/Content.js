@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -9,20 +8,22 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-exports.__esModule = true;
-var React = require("react");
+import * as React from 'react';
 /**
- * SVG Icon Reusable Component
+ * Content Component with HTML sanitization
  */
-var SVG = (function (_super) {
-    __extends(SVG, _super);
-    function SVG() {
+var Content = (function (_super) {
+    __extends(Content, _super);
+    function Content() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    SVG.prototype.render = function () {
-        return (React.createElement("svg", { className: "ico" },
-            React.createElement("use", { xlinkHref: "assets.svg" + this.props.icon }, " ")));
+    Content.prototype.parseMarkup = function (rawHtml) {
+        return { __html: rawHtml };
     };
-    return SVG;
+    Content.prototype.render = function () {
+        return (React.createElement("span", { dangerouslySetInnerHTML: this.parseMarkup(this.props.text) }));
+    };
+    return Content;
 }(React.Component));
-exports.SVG = SVG;
+export { Content };
+//# sourceMappingURL=Content.js.map

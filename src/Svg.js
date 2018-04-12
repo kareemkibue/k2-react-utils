@@ -10,20 +10,18 @@ var __extends = (this && this.__extends) || (function () {
 })();
 import * as React from 'react';
 /**
- * Content Component with HTML sanitization
+ * SVG Icon Reusable Component
  */
-var Content = (function (_super) {
-    __extends(Content, _super);
-    function Content() {
+var SVG = (function (_super) {
+    __extends(SVG, _super);
+    function SVG() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Content.prototype.parseMarkup = function (rawHtml) {
-        return { __html: rawHtml };
+    SVG.prototype.render = function () {
+        return (React.createElement("svg", { className: "ico" },
+            React.createElement("use", { xlinkHref: "assets.svg" + this.props.icon }, " ")));
     };
-    Content.prototype.render = function () {
-        return (React.createElement("span", { dangerouslySetInnerHTML: this.parseMarkup(this.props.text) }));
-    };
-    return Content;
+    return SVG;
 }(React.Component));
-export { Content };
-//# sourceMappingURL=Context.js.map
+export { SVG };
+//# sourceMappingURL=Svg.js.map

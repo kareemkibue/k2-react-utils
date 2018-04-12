@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { connect as connectReactRedux } from 'react-redux';
 
 /**
