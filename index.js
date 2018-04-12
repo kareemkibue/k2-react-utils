@@ -1,12 +1,7 @@
-"use strict";
-exports.__esModule = true;
-var classify_1 = require("./src/classify");
-exports.classify = classify_1.classify;
-var connect_1 = require("./src/connect");
-exports.connect = connect_1.connect;
-var Content_1 = require("./src/Content");
-exports.Content = Content_1.Content;
-var Svg_1 = require("./src/Svg");
-exports.SVG = Svg_1.SVG;
-var parser_1 = require("./src/parser");
-exports.Parser = parser_1["default"];
+export { convertPixelsToRem } from './src/fontConverter';
+export { classify } from './src/classify';
+export { connect } from './src/connect';
+export { Content } from './src/Content';
+export { SVG } from './src/Svg';
+export { default as Parser } from './src/parser';
+//# sourceMappingURL=index.js.map
