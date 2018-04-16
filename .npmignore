@@ -15,3 +15,4 @@ package-lock.json
 .map
 .travis.yml
 index.ts
+src/*.ts
