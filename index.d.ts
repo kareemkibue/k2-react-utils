@@ -13,9 +13,15 @@ export function connect():any;
 
 export function convertPixelsToRem(pixelValue: string, baseFontSize?:string):string;
 
-export declare class SVG extends React.Component<any, any> {}
+interface ISVGProps {
+    icon: string
+}
 
-export function Parser():any;
+export declare class SVG extends React.Component<ISVGProps, any> {}
+
+export declare class Parser{
+    xmlToJson: (xmlNode:any)=>{}
+}
 
 
 
