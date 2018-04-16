@@ -12,3 +12,6 @@ node_modules/
 .tscache/
 yarn.lock
 package-lock.json
+.map
+.travis.yml
+index.ts

@@ -3,17 +3,17 @@ import * as XmlJs from 'xml-js';
  * A Parser utility that converts XML<=>JSON built by Nashwaan
  * XML-Js Library - https://github.com/nashwaan/xml-js
  */
-var Parser = (function () {
-    function Parser() {
+var ParserBase = (function () {
+    function ParserBase() {
     }
-    Parser.prototype.xmlToJson = function (xmlNode) {
+    ParserBase.prototype.xmlToJson = function (xmlNode) {
         return JSON.parse(XmlJs.xml2json(xmlNode, {
             compact: true,
             ignoreComment: true,
-            spaces: 4
+            spaces: 4,
         }));
     };
-    return Parser;
+    return ParserBase;
 }());
-export default new Parser();
+export var Parser = new ParserBase();
 //# sourceMappingURL=parser.js.map
