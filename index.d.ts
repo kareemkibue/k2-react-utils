@@ -14,13 +14,21 @@ export function connect(mapStateToProps: any, mapDispatchToProps?: any, mergePro
 export function convertPixelsToRem(pixelValue: string, baseFontSize?:string):string;
 
 interface IIconProps {
-    icon: string
+    icon: string;
+    spritePath:string;
+    className?: string;
+    
 }
 
 export declare class Icon extends React.Component<IIconProps, {}> {}
 
 export declare class Parser{
     xmlToJson: (xmlNode:any)=>{}
+}
+
+/* WIP */
+export namespace utils{
+    
 }
 
 
