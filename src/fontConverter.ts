@@ -3,7 +3,7 @@ const browserDefaultFontSize = '16px';
 /**
  * Utility to convert pixels to rem units
  */
-export const convertPixelsToRem = (pixelValue: string, baseFontSize = browserDefaultFontSize):string=> {
+export const convertPixelsToRem = (pixelValue: string, baseFontSize:string = browserDefaultFontSize):string=> {
 	const pixelUnit:number = getPixelUnit(pixelValue);
 	const baseFontUnit:number = getPixelUnit(baseFontSize);
 	const calculatedRemUnit:number = pixelUnit / baseFontUnit;

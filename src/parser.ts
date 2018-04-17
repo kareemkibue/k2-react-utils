@@ -5,6 +5,7 @@ import * as XmlJs from 'xml-js';
  * XML-Js Library - https://github.com/nashwaan/xml-js
  */
 class ParserBase {
+	
 	xmlToJson(xmlNode: any): any {
 		return JSON.parse(
 			XmlJs.xml2json(xmlNode, {
