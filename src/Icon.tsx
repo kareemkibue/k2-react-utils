@@ -3,15 +3,15 @@ import * as React from 'react';
 /**
  * Interface for SVG Props
  */
-interface ISVGProps {
+interface IIconProps {
     icon: string
 }
 
 /**
  * SVG Icon Reusable Component
  */
-export class SVG extends React.Component<ISVGProps, {}> {
-    props: ISVGProps;
+export class Icon extends React.Component<IIconProps, {}> {
+    props: IIconProps;
 
     render() {
         return (<svg className="ico" >
