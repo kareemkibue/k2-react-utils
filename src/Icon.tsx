@@ -1,21 +1,31 @@
 import * as React from 'react';
+import styled from "styled-components";
 
 /**
  * Interface for SVG Props
  */
-interface IIconProps {
-    icon: string
+interface IconWrapperProps {
+    icon: string;
+    spritePath:string;
+    className?: string;
+    
+
 }
 
 /**
- * SVG Icon Reusable Component
+ * Stateless Icon Component
  */
-export class Icon extends React.Component<IIconProps, {}> {
-    props: IIconProps;
+const IconWrapper = (props: IconWrapperProps) => (
+    <svg className={props.className}>
+        <use xlinkHref={`${props.spritePath}#${props.icon}`} />
+    </svg>
+);
 
-    render() {
-        return (<svg className="ico" >
-            <use xlinkHref={"assets.svg" + this.props.icon}> </use>
-        </svg>);
-    }
-}
+const Icon = styled(IconWrapper)`
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    transition: 0.2s ease-in;
+`;
+
+export {Icon}
