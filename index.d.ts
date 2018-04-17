@@ -8,7 +8,7 @@ import * as React from 'react';
 
 export function classify(classObject: any):string;
 
-export function connect():any;
+export function connect(mapStateToProps: any, mapDispatchToProps?: any, mergeProps?: any, options?: any):any;
 
 
 export function convertPixelsToRem(pixelValue: string, baseFontSize?:string):string;
