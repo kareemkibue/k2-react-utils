@@ -16,3 +16,4 @@ package-lock.json
 .travis.yml
 index.ts
 src/*.ts
+src/*.tsx
