@@ -22,6 +22,12 @@ interface IIconProps {
 
 export declare class Icon extends React.Component<IIconProps, {}> {}
 
+interface IContentProps {
+    text: string
+}
+
+export declare class Content extends React.Component<IContentProps, {}> {}
+
 export declare class Parser{
     xmlToJson: (xmlNode:any)=>{}
 }
@@ -30,13 +36,3 @@ export declare class Parser{
 export namespace utils{
     
 }
-
-
-
-/* export { convertPixelsToRem } from './src/fontConverter';
-export { classify } from './src/classify';
-export { connect } from './src/connect';
-export { Content } from './src/Content';
-export { SVG } from './src/Svg';
-export { Parser } from './src/parser';
- */
