@@ -1,22 +1,22 @@
 const path = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const pkg = require('./package.json');
 
 const webpackConfig = {
-	// mode: 'development',
-	entry: './index.ts',
+	mode: 'development',
+	entry: './main.ts',
 	output: {
 		path: path.resolve(__dirname, './'),
 		filename: 'index.js',
+		libraryTarget: 'commonjs',
 	},
-	// devtool: 'inline-source-map',
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js'],
 	},
 	module: {
 		rules: [
 			{
-				// test: /\.tsx?$/,
 				test: /\.(ts|tsx)$/,
 				loader: 'ts-loader',
 				exclude: [/node_modules/],
@@ -25,17 +25,23 @@ const webpackConfig = {
 		],
 	},
 	plugins: [
-		new UglifyJsPlugin({
-			cache: true,
-			parallel: true,
-			uglifyOptions: {
-				compress: false,
-				ecma: 6,
-				mangle: true,
-			},
-			sourceMap: false,
-		}),
+		// new UglifyJsPlugin({
+		// 	cache: true,
+		// 	parallel: true,
+		// 	uglifyOptions: {
+		// 		compress: false,
+		// 		ecma: 5,
+		// 		mangle: false,
+		// 	},
+		// 	sourceMap: false,
+		// }),
 	],
+	externals: {
+		react: 'react',
+		'react-redux': 'react-redux',
+		redux: 'redux',
+		'styled-components': 'styled-components',
+	},
 };
 
 module.exports = webpackConfig;
