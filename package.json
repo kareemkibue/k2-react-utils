@@ -1,6 +1,6 @@
 {
 	"name": "k2-react-utils",
-	"version": "0.10.0",
+	"version": "0.10.1",
 	"description": "A collection of handy React Utilities",
 	"main": "index.tsx",
 	"repository": {
@@ -14,7 +14,7 @@
 		"build": "npm run webpack:build",
 		"webpack:watch": "node_modules/.bin/webpack -w",
 		"webpack:build": "node_modules/.bin/webpack -p",
-		"test": "echo 'No tests written for now'"
+		"test": "echo 'No test coverage, yet.'"
 	},
 	"dependencies": {
 		"xml-js": "^1.6.1"
