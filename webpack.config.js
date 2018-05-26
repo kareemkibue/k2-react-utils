@@ -2,14 +2,17 @@ const path = require('path');
 const webpack = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const pkg = require('./package.json');
+const libraryName = pkg.name;
 
 const webpackConfig = {
 	mode: 'development',
 	entry: './main.ts',
 	output: {
 		path: path.resolve(__dirname, './'),
+		library: libraryName,
 		filename: 'index.js',
-		libraryTarget: 'commonjs',
+		// libraryTarget: 'commonjs',
+		libraryTarget: 'umd',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js'],
@@ -37,10 +40,30 @@ const webpackConfig = {
 		// }),
 	],
 	externals: {
-		react: 'react',
-		'react-redux': 'react-redux',
-		redux: 'redux',
-		'styled-components': 'styled-components',
+		react: {
+			commonjs: 'react',
+			commonjs2: 'react',
+			amd: 'React',
+			root: 'React',
+		},
+		'react-redux': {
+			commonjs: 'react-redux',
+			commonjs2: 'react-redux',
+			amd: 'ReactRedux',
+			root: 'ReactRedux',
+		},
+		redux: {
+			commonjs: 'redux',
+			commonjs2: 'redux',
+			amd: 'Redux',
+			root: 'Redux',
+		},
+		'styled-components': {
+			commonjs: 'styled-components',
+			commonjs2: 'styled-components',
+			amd: 'StyledComponents',
+			root: 'StyledComponents',
+		},
 	},
 };
 
