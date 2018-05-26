@@ -1,27 +1,36 @@
 {
-    "name": "k2-react-utils",
-    "version": "0.9.4",
-    "description": "A collection of handy React Utilities",
-    "main": "index.tsx",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/kareemkibue/k2-react-utils.git"
-    },
-    "author": "Kareem Kibue <mail@kareemkibue.com>",
-    "license": "MIT",
-    "scripts": {
-        "test": ""
-    },
-    "dependencies": {
-        "react": "^16.2.0",
-        "react-redux": "^5.0.6",
-        "redux": "^3.7.2",
-        "xml-js": "^1.6.1"
-    },
-    "devDependencies": {
-        "@types/react": "^16.3.9",
-        "@types/react-redux": "^5.0.16",
-        "styled-components": "^3.2.5",
-        "typescript": "^2.8.1"
-    }
+	"name": "k2-react-utils",
+	"version": "0.10.0",
+	"description": "A collection of handy React Utilities",
+	"main": "index.tsx",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kareemkibue/k2-react-utils.git"
+	},
+	"author": "Kareem Kibue <mail@kareemkibue.com>",
+	"license": "MIT",
+	"scripts": {
+		"start": "npm run webpack:watch",
+		"build": "npm run webpack:build",
+		"webpack:watch": "node_modules/.bin/webpack -w",
+		"webpack:build": "node_modules/.bin/webpack -p",
+		"test": "echo 'No tests written for now'"
+	},
+	"dependencies": {
+		"react": "^16.2.0",
+		"react-redux": "^5.0.6",
+		"redux": "^3.7.2",
+		"xml-js": "^1.6.1"
+	},
+	"devDependencies": {
+		"@types/react": "^16.3.9",
+		"@types/react-redux": "^5.0.16",
+		"source-map-loader": "^0.2.3",
+		"styled-components": "^3.2.5",
+		"ts-loader": "^4.3.0",
+		"typescript": "^2.8.1",
+		"uglifyjs-webpack-plugin": "^1.2.5",
+		"webpack": "^4.9.1",
+		"webpack-command": "^0.2.0"
+	}
 }
