@@ -17,14 +17,18 @@
 		"test": "echo 'No tests written for now'"
 	},
 	"dependencies": {
+		"xml-js": "^1.6.1"
+	},
+	"peerDependencies": {
 		"react": "^16.2.0",
 		"react-redux": "^5.0.6",
-		"redux": "^3.7.2",
-		"xml-js": "^1.6.1"
+		"redux": "^4.0.0"
 	},
 	"devDependencies": {
 		"@types/react": "^16.3.9",
 		"@types/react-redux": "^5.0.16",
+		"react": "^16.2.0",
+		"react-redux": "^5.0.6",
 		"source-map-loader": "^0.2.3",
 		"styled-components": "^3.2.5",
 		"ts-loader": "^4.3.0",
