@@ -1,5 +1,8 @@
 {
 	"compilerOptions": {
+		"declaration": true,
+		"declarationDir": "/types",
+		"declarationMap": true,
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"jsx": "react",
@@ -9,8 +12,10 @@
 		"noImplicitAny": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		// "outDir": "./build",
-		// "outFile": "index.js",
+		"outDir": "/dist",
+		"outFile": "index.js",
+		"pretty": true,
+		"strict": true,
 		"sourceMap": true,
 		"strictNullChecks": true,
 		"target": "es5"
