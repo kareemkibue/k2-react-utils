@@ -13,8 +13,9 @@ class Content extends React.Component<IContentProps, {}> {
 
 	render() {
 		const { text } = this.props;
+
 		return <span dangerouslySetInnerHTML={this.parseMarkup(text)} />;
 	}
 }
 
-export { Content };
+export { Content, IContentProps };

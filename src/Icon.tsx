@@ -1,18 +1,22 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface IconWrapperProps {
+interface IconProps {
 	icon: string;
-	spritePath: string;
+	spritePath?: string;
 	className?: string;
 }
 
 /** Stateless Icon Component */
-const IconWrapper: React.StatelessComponent<IconWrapperProps> = (props) => (
-	<svg className={props.className}>
-		<use xlinkHref={`${props.spritePath}#${props.icon}`} />
-	</svg>
-);
+const IconWrapper: React.StatelessComponent<IconProps> = (props) => {
+	const { className, icon, spritePath = '' } = props;
+
+	return (
+		<svg className={className}>
+			<use xlinkHref={`${spritePath}#${icon}`} />
+		</svg>
+	);
+};
 
 const Icon = styled(IconWrapper)`
 	display: inline-block;
@@ -21,4 +25,4 @@ const Icon = styled(IconWrapper)`
 	transition: 0.2s ease-in;
 `;
 
-export { Icon };
+export { Icon, IconWrapper, IconProps };
