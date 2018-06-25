@@ -1,8 +1,8 @@
 {
 	"name": "k2-react-utils",
-	"version": "0.10.1",
+	"version": "0.10.3",
 	"description": "A collection of handy React Utilities",
-	"main": "index.tsx",
+	"main": "index.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kareemkibue/k2-react-utils.git"
@@ -19,18 +19,15 @@
 	"dependencies": {
 		"xml-js": "^1.6.1"
 	},
-	"peerDependencies": {
-		"react": "^16.2.0",
-		"react-redux": "^5.0.6",
-		"redux": "^4.0.0"
-	},
 	"devDependencies": {
+		"@types/node": "^10.1.4",
 		"@types/react": "^16.3.9",
 		"@types/react-redux": "^5.0.16",
 		"react": "^16.2.0",
 		"react-redux": "^5.0.6",
+		"redux": "3.7.2",
 		"source-map-loader": "^0.2.3",
-		"styled-components": "^3.2.5",
+		"styled-components": "^3.3.0",
 		"ts-loader": "^4.3.0",
 		"typescript": "^2.8.1",
 		"uglifyjs-webpack-plugin": "^1.2.5",

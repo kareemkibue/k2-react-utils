@@ -5,8 +5,12 @@ import * as XmlJs from 'xml-js';
  * XML-Js Library - https://github.com/nashwaan/xml-js
  */
 class ParserBase {
-	
+	/** ! to be Deprecated  */
 	xmlToJson(xmlNode: any): any {
+		return this.convertXmlToJson(xmlNode);
+	}
+
+	convertXmlToJson(xmlNode: any): any {
 		return JSON.parse(
 			XmlJs.xml2json(xmlNode, {
 				compact: true,
@@ -17,4 +21,6 @@ class ParserBase {
 	}
 }
 
-export const Parser = new ParserBase();
+const Parser = new ParserBase();
+
+export { ParserBase, Parser };

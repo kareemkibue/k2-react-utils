@@ -1,24 +1,21 @@
 import * as React from 'react';
 
-/**
- * Interface for Content Props
- */
+/** Interface for Content Props */
 interface IContentProps {
-    text: string
+	text: string;
 }
 
-/**
- * Content Component with HTML sanitization
- */
-export class Content extends React.Component<IContentProps, {}> {
-    props: IContentProps;
+/** Content Component with HTML sanitization */
+class Content extends React.Component<IContentProps, {}> {
+	private parseMarkup(rawHtml: string) {
+		return { __html: rawHtml };
+	}
 
-    private parseMarkup(rawHtml: string) {
-        return { __html: rawHtml };
-    }
+	render() {
+		const { text } = this.props;
 
-    render() {
-        return (<span dangerouslySetInnerHTML={this.parseMarkup(this.props.text)} >
-        </span>);
-    }
+		return <span dangerouslySetInnerHTML={this.parseMarkup(text)} />;
+	}
 }
+
+export { Content, IContentProps };
