@@ -16,7 +16,7 @@ export function convertPixelsToEm(pixelValue: string, baseFontSize?: string): st
 
 interface IIconProps {
 	icon: string;
-	spritePath: string;
+	spritePath?: string;
 	className?: string;
 }
 

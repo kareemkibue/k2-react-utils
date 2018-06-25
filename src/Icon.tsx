@@ -1,14 +1,14 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-interface IconProps {
+interface IIconProps {
 	icon: string;
 	spritePath?: string;
 	className?: string;
 }
 
 /** Stateless Icon Component */
-const IconWrapper: React.StatelessComponent<IconProps> = (props) => {
+const IconContainer: React.StatelessComponent<IIconProps> = (props) => {
 	const { className, icon, spritePath = '' } = props;
 
 	return (
@@ -18,11 +18,11 @@ const IconWrapper: React.StatelessComponent<IconProps> = (props) => {
 	);
 };
 
-const Icon = styled(IconWrapper)`
+const Icon = styled(IconContainer)`
 	display: inline-block;
 	vertical-align: top;
 	position: absolute;
 	transition: 0.2s ease-in;
 `;
 
-export { Icon, IconWrapper, IconProps };
+export { Icon, IIconProps };
