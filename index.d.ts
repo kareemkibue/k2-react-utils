@@ -14,6 +14,8 @@ export function convertPixelsToRem(pixelValue: string, baseFontSize?: string): s
 
 export function convertPixelsToEm(pixelValue: string, baseFontSize?: string): string;
 
+export function getEnvFromHost(): { isLocal: boolean; host: string };
+
 interface IIconProps {
 	icon: string;
 	spritePath?: string;
