@@ -8,4 +8,4 @@ jobs:
             - checkout
             - run: npm install
             - run: npm build
-            # - run: npm run test
+            - run: npm run test
