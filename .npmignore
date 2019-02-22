@@ -11,6 +11,8 @@ node_modules/
 .sass-cache/
 .tscache/
 dist/
+src/
+
 yarn.lock
 package-lock.json
 .map
