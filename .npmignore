@@ -10,9 +10,11 @@ bower_components/
 node_modules/
 .sass-cache/
 .tscache/
+dist/
 yarn.lock
 package-lock.json
 .map
+.circleci/
 .travis.yml
 !*.d.ts
 main.ts
