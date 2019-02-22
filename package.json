@@ -14,7 +14,7 @@
 		"build": "npm run webpack:build",
 		"webpack:watch": "node_modules/.bin/webpack -w",
 		"webpack:build": "node_modules/.bin/webpack -p",
-		"test": "echo 'No test coverage, yet.'"
+		"test": "echo 'No tests.'"
 	},
 	"dependencies": {
 		"xml-js": "^1.6.1"
