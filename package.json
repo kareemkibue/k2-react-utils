@@ -19,19 +19,20 @@
 	"dependencies": {
 		"xml-js": "^1.6.1"
 	},
+	"peerDependencies": {},
 	"devDependencies": {
-		"@types/node": "^10.1.4",
-		"@types/react": "^16.3.9",
-		"@types/react-redux": "^5.0.16",
-		"react": "^16.2.0",
-		"react-redux": "^5.0.6",
-		"redux": "3.7.2",
+		"@types/node": "11.9.4",
+		"@types/react": "16.8.4",
+		"@types/react-redux": "7.0.1",
+		"react": "16.8.3",
+		"react-redux": "6.0.1",
+		"redux": "4.0.1",
 		"source-map-loader": "^0.2.3",
 		"styled-components": "^3.3.0",
 		"ts-loader": "^4.3.0",
-		"typescript": "^2.8.1",
+		"typescript": "3.3.3333",
 		"uglifyjs-webpack-plugin": "^1.2.5",
-		"webpack": "^4.9.1",
-		"webpack-command": "^0.2.0"
+		"webpack": "4.29.5",
+		"webpack-command": "0.4.2"
 	}
 }
