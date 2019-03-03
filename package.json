@@ -1,6 +1,6 @@
 {
 	"name": "k2-react-utils",
-	"version": "0.11.2",
+	"version": "0.11.5",
 	"description": "A collection of handy React/JavaScript Utilities",
 	"main": "index.js",
 	"repository": {
@@ -14,24 +14,25 @@
 		"build": "npm run webpack:build",
 		"webpack:watch": "node_modules/.bin/webpack -w",
 		"webpack:build": "node_modules/.bin/webpack -p",
-		"test": "echo 'No test coverage, yet.'"
+		"test": "echo 'No tests.'"
 	},
 	"dependencies": {
 		"xml-js": "^1.6.1"
 	},
+	"peerDependencies": {},
 	"devDependencies": {
-		"@types/node": "^11.9.6",
-		"@types/react": "^16.3.9",
-		"@types/react-redux": "^7.0.1",
-		"react": "^16.2.0",
-	  "react-redux": "^6.0.1",
+		"@types/node": "11.9.4",
+		"@types/react": "16.8.4",
+		"@types/react-redux": "7.0.1",
+		"react": "16.8.3",
+		"react-redux": "6.0.1",
 		"redux": "4.0.1",
 		"source-map-loader": "^0.2.3",
 		"styled-components": "^3.3.0",		
 		"ts-loader": "^5.3.3",
-    "typescript": "^3.3.3",
+		"typescript": "3.3.3333",
 		"uglifyjs-webpack-plugin": "^2.1.1",
-		"webpack": "^4.9.1",
+		"webpack": "4.29.5",
 		"webpack-command": "^0.4.2"
 	}
 }

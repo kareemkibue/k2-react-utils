@@ -7,7 +7,10 @@ const getPixelUnit = (pixelValue: string): number => {
 };
 
 /** Font utility that converts pixels to rem units */
-const convertPixelsToRem = (pixelValue: string, baseFontSize: string = defaultBrowserFontSize): string => {
+const convertPixelsToRem = (
+	pixelValue: string,
+	baseFontSize: string = defaultBrowserFontSize
+): string => {
 	const pixelUnit: number = getPixelUnit(pixelValue);
 	const baseFontUnit: number = getPixelUnit(baseFontSize);
 	const calculatedRemUnit: number = pixelUnit / baseFontUnit;
@@ -29,7 +32,10 @@ const convertPixelsToRem = (pixelValue: string, baseFontSize: string = defaultBr
 };
 
 /** Font utility that converts pixels to em units */
-const convertPixelsToEm = (pixelValue: string, baseFontSize: string = defaultBrowserFontSize): string => {
+const convertPixelsToEm = (
+	pixelValue: string,
+	baseFontSize: string = defaultBrowserFontSize
+): string => {
 	const pixelUnit: number = getPixelUnit(pixelValue);
 	const baseFontUnit: number = getPixelUnit(baseFontSize);
 	const calculatedEmUnit: number = pixelUnit / baseFontUnit;
