@@ -1,6 +1,6 @@
 {
 	"name": "k2-react-utils",
-	"version": "0.11.5",
+	"version": "0.11.7",
 	"description": "A collection of handy React/JavaScript Utilities",
 	"main": "index.js",
 	"repository": {
@@ -10,16 +10,17 @@
 	"author": "Kareem Kibue <mail@kareemkibue.com>",
 	"license": "MIT",
 	"scripts": {
-		"start": "npm run webpack:watch",
-		"build": "npm run webpack:build",
-		"webpack:watch": "node_modules/.bin/webpack -w",
-		"webpack:build": "node_modules/.bin/webpack -p",
+		"start": "tsc -w",
+		"build": "tsc",
+		"publish": "tsc && npm test && copy package.json .publish\\ && copy .npmignore .publish\\ && npm publish",
 		"test": "echo 'No tests.'"
 	},
 	"dependencies": {
 		"xml-js": "^1.6.1"
 	},
-	"peerDependencies": {},
+	"peerDependencies": {
+		"react": "*"
+	},
 	"devDependencies": {
 		"@types/node": "11.9.4",
 		"@types/react": "16.8.4",
@@ -28,7 +29,7 @@
 		"react-redux": "6.0.1",
 		"redux": "4.0.1",
 		"source-map-loader": "^0.2.3",
-		"styled-components": "^3.3.0",		
+		"styled-components": "^3.3.0",
 		"ts-loader": "^5.3.3",
 		"typescript": "3.3.3333",
 		"uglifyjs-webpack-plugin": "^2.1.1",

@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"declaration": true,
-		// "declarationDir": "./dist",
+		"declarationDir": "./.publish/types",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"jsx": "react",
@@ -11,7 +11,7 @@
 		"noImplicitAny": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"outDir": "./dist",
+		"outDir": "./.publish",
 		// "outFile": "index.js",
 		"pretty": true,
 		"sourceMap": false,
@@ -20,5 +20,6 @@
 		"strictNullChecks": true,
 		"target": "es5"
 	},
-	"exclude": ["node_modules"]
+	"include": ["index.ts", "./src"],
+	"exclude": ["node_modules", "demo", ".publish"]
 }
