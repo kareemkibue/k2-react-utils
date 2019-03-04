@@ -15,7 +15,8 @@
 		"npm:publish": "npm run build && npm test && npm run copy:packagejson && cd .publish && npm publish",
 		"copy:packagejson": "copy package.json .publish\\",
 		"copy:npmignore": "copy .npmignore .publish\\",
-		"test": "echo 'No tests.'"
+		"test": "echo 'No tests.'",
+		"postpublish": "echo 'k2-React published successfully to NPM.' "
 	},
 	"dependencies": {
 		"xml-js": "^1.6.1"
@@ -24,18 +25,11 @@
 		"react": "*"
 	},
 	"devDependencies": {
-		"@types/node": "11.9.4",
 		"@types/react": "16.8.4",
 		"@types/react-redux": "7.0.1",
 		"react": "16.8.3",
 		"react-redux": "6.0.1",
 		"redux": "4.0.1",
-		"source-map-loader": "^0.2.3",
-		"styled-components": "^3.3.0",
-		"ts-loader": "^5.3.3",
-		"typescript": "3.3.3333",
-		"uglifyjs-webpack-plugin": "^2.1.1",
-		"webpack": "4.29.5",
-		"webpack-command": "^0.4.2"
+		"typescript": "3.3.3333"
 	}
 }
