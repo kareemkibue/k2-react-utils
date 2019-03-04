@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"declaration": true,
-		"declarationDir": "./.publish/types",
+		// "declarationDir": "./.publish/types",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
 		"jsx": "react",
