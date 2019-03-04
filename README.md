@@ -8,11 +8,16 @@ MIT
 
 ## Changelog
 
+**Version 0.12.0**
+
+-   Update build
+-   Deprecate `Icon` util
+
 **Version 0.11.0**
 
--   Added `getEnvHost` util
+-   Add `getEnvHost` util
 
 **Version 0.5.0**
 
--   Updated folder structure
--   Updated package name on NPM
+-   Update folder structure
+-   Update package name on NPM
