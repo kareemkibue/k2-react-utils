@@ -1,21 +1,2 @@
 # syntax: glob
 
-# #Hidden files
-# *.DS_Store
-# *[Tt]humbs.db
-# *.Trashes
-
-# #project specific
-# bower_components/
-# node_modules/
-# .sass-cache/
-# .tscache/
-
-# yarn.lock
-# package-lock.json
-# .map
-# .circleci/
-# .travis.yml
-# !*.d.ts
-# main.ts
-# src/*.tsx
