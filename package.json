@@ -11,7 +11,7 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "tsc -w",
-		"build": "del /F /Q .publish && tsc",
+		"build": "del-cli -f .publish && tsc",
 		"npm:publish": "npm run build && npm test && npm run copy:packagejson && cd .publish && npm publish",
 		"copy:packagejson": "copy package.json .publish\\",
 		"copy:npmignore": "copy .npmignore .publish\\",
@@ -27,6 +27,7 @@
 	"devDependencies": {
 		"@types/react": "16.8.4",
 		"@types/react-redux": "7.0.1",
+		"del-cli": "1.1.0",
 		"react": "16.8.3",
 		"react-redux": "6.0.1",
 		"redux": "4.0.1",
