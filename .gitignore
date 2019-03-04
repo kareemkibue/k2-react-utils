@@ -10,13 +10,6 @@ bower_components/
 node_modules/
 .sass-cache/
 .tscache/
-yarn.lock
-package-lock.json
-.yml
-
-#Config Files
-settings.json
-db.config
 
 #Conflict files
 *.orig
@@ -29,7 +22,6 @@ db.config
 #Log files
 *.log
 *.debug
-logs/*
 
 # Visual Studio, VS-Code Settings
 .vscode/
