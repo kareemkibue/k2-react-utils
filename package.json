@@ -1,7 +1,7 @@
 {
 	"name": "k2-react-utils",
-	"version": "0.11.2",
-	"description": "A collection of handy React/JavaScript Utilities",
+	"version": "0.12.0",
+	"description": "A collection of handy React/JavaScript utilities",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
@@ -10,28 +10,26 @@
 	"author": "Kareem Kibue <mail@kareemkibue.com>",
 	"license": "MIT",
 	"scripts": {
-		"start": "npm run webpack:watch",
-		"build": "npm run webpack:build",
-		"webpack:watch": "node_modules/.bin/webpack -w",
-		"webpack:build": "node_modules/.bin/webpack -p",
-		"test": "echo 'No test coverage, yet.'"
+		"start": "tsc -w",
+		"build": "del /F /Q .publish && tsc",
+		"npm:publish": "npm run build && npm test && npm run copy:packagejson && cd .publish && npm publish",
+		"copy:packagejson": "copy package.json .publish\\",
+		"copy:npmignore": "copy .npmignore .publish\\",
+		"test": "echo 'No tests.'",
+		"postpublish": "echo 'k2-React published successfully to NPM.' "
 	},
 	"dependencies": {
 		"xml-js": "^1.6.1"
 	},
+	"peerDependencies": {
+		"react": "*"
+	},
 	"devDependencies": {
-		"@types/node": "^11.9.6",
-		"@types/react": "^16.3.9",
-		"@types/react-redux": "^7.0.1",
-		"react": "^16.2.0",
-	  "react-redux": "^6.0.1",
+		"@types/react": "16.8.4",
+		"@types/react-redux": "7.0.1",
+		"react": "16.8.3",
+		"react-redux": "6.0.1",
 		"redux": "4.0.1",
-		"source-map-loader": "^0.2.3",
-		"styled-components": "^3.3.0",		
-		"ts-loader": "^5.3.3",
-    "typescript": "^3.3.3",
-		"uglifyjs-webpack-plugin": "^2.1.1",
-		"webpack": "^4.9.1",
-		"webpack-command": "^0.4.2"
+		"typescript": "3.3.3333"
 	}
 }
