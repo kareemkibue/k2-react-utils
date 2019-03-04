@@ -14,9 +14,6 @@ yarn.lock
 package-lock.json
 .yml
 
-index.js
-src/*.js
-
 #Config Files
 settings.json
 db.config
@@ -26,8 +23,7 @@ db.config
 *.resolve
 
 #Compiled files
-map/
-dist/
+.publish/
 *.map
 
 #Log files
