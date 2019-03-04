@@ -1,6 +1,6 @@
 {
 	"name": "k2-react-utils",
-	"version": "0.11.7",
+	"version": "0.11.10",
 	"description": "A collection of handy React/JavaScript Utilities",
 	"main": "index.js",
 	"repository": {
@@ -11,8 +11,10 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "tsc -w",
-		"build": "tsc",
-		"publish": "tsc && npm test && copy package.json .publish\\ && copy .npmignore .publish\\ && npm publish",
+		"build": "del /F /Q .publish && tsc",
+		"npm:publish": "npm run build && npm test && npm run copy:packagejson && cd .publish && npm publish",
+		"copy:packagejson": "copy package.json .publish\\",
+		"copy:npmignore": "copy .npmignore .publish\\",
 		"test": "echo 'No tests.'"
 	},
 	"dependencies": {
