@@ -12,12 +12,13 @@
 	"scripts": {
 		"start": "npm-run-all tsc:watch test:watch",
 		"tsc:watch": "tsc -w",
+		"clean": "del-cli -f node_modules && del-cli -f yarn.lock && yarn",
 		"build": "del-cli -f .publish && tsc",
 		"npm:publish": "npm run build && npm test && npm run copy:packagejson && cd .publish && npm publish",
 		"copy:packagejson": "copy package.json .publish\\",
 		"copy:npmignore": "copy .npmignore .publish\\",
 		"test": "node_modules/.bin/jest --coverage --passWithNoTests",
-		"test:watch": "node_modules/.bin/jest --watchAll --passWithNoTests",
+		"test:watch": "node_modules/.bin/jest --watchAll",
 		"postpublish": "echo 'k2-React published successfully to NPM.' "
 	},
 	"dependencies": {
