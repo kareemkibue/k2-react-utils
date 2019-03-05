@@ -10,7 +10,7 @@ class Parser {
 		return this.convertXmlToJson(xmlNode);
 	}
 
-	convertXmlToJson(xmlNode: any): any {
+	private convertXmlToJson(xmlNode: any): any {
 		return JSON.parse(
 			XmlJs.xml2json(xmlNode, {
 				compact: true,
