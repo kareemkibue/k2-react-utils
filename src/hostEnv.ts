@@ -1,4 +1,9 @@
-const getEnvFromHost = (): { isLocal: boolean; host: string } => {
+interface IHostEnv {
+	isLocal: boolean;
+	host: string;
+}
+
+const getEnvFromHost = (): IHostEnv => {
 	const host: string = window.location.host;
 	const isLocal: boolean = host.indexOf('localhost') >= 0;
 
