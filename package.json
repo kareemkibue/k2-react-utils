@@ -10,7 +10,7 @@
 	"author": "Kareem Kibue <mail@kareemkibue.com>",
 	"license": "MIT",
 	"scripts": {
-		"start": "npm-run-all tsc:watch test:watch",
+		"start": "npm run tsc:watch",
 		"tsc:watch": "tsc -w",
 		"clean": "del-cli -f node_modules && del-cli -f yarn.lock && yarn",
 		"build": "del-cli -f .publish && tsc",
@@ -31,6 +31,7 @@
 		"@types/jest": "24.0.9",
 		"@types/react": "16.8.6",
 		"@types/react-redux": "7.0.1",
+		"@types/react-test-renderer": "16.8.1",
 		"del-cli": "1.1.0",
 		"jest": "24.1.0",
 		"jest-dom": "3.1.2",
