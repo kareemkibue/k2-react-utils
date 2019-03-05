@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Content it renders 1`] = `
-<span
-  dangerouslySetInnerHTML={
-    Object {
-      "__html": "http://www.facebook.com",
-    }
-  }
-/>
-`;
-
 exports[`Content renders 1`] = `
 <span
   dangerouslySetInnerHTML={

@@ -20,6 +20,6 @@
 		"strictNullChecks": true,
 		"target": "es5"
 	},
-	"include": ["index.ts", "./src"],
+	"include": ["index.ts", "./src", "./tests"],
 	"exclude": ["node_modules", ".publish"]
 }
