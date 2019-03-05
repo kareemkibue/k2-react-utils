@@ -15,7 +15,8 @@
 		"npm:publish": "npm run build && npm test && npm run copy:packagejson && cd .publish && npm publish",
 		"copy:packagejson": "copy package.json .publish\\",
 		"copy:npmignore": "copy .npmignore .publish\\",
-		"test": "echo 'No tests.'",
+		"test": "node_modules/.bin/jest --coverage",
+		"test:watch": "node_modules/.bin/jest --watchAll",
 		"postpublish": "echo 'k2-React published successfully to NPM.' "
 	},
 	"dependencies": {
@@ -25,12 +26,19 @@
 		"react": "*"
 	},
 	"devDependencies": {
-		"@types/react": "16.8.4",
+		"@types/jest": "24.0.5",
+		"@types/react": "16.8.6",
 		"@types/react-redux": "7.0.1",
 		"del-cli": "1.1.0",
+		"jest": "24.1.0",
+		"jest-dom": "3.1.2",
 		"react": "16.8.3",
+		"react-dom": "16.8.3",
 		"react-redux": "6.0.1",
+		"react-test-renderer": "16.8.2",
+		"react-testing-library": "5.8.0",
 		"redux": "4.0.1",
+		"ts-jest": "24.0.0",
 		"typescript": "3.3.3333"
 	}
 }
