@@ -4,8 +4,8 @@ import * as XmlJs from 'xml-js';
  * A Parser utility that converts XML<=>JSON built by Nashwaan
  * XML-Js Library - https://github.com/nashwaan/xml-js
  */
-class ParserBase {
-	/** ! to be Deprecated  */
+class Parser {
+	/** // ! To Deprecate  */
 	xmlToJson(xmlNode: any): any {
 		return this.convertXmlToJson(xmlNode);
 	}
@@ -21,6 +21,6 @@ class ParserBase {
 	}
 }
 
-const Parser = new ParserBase();
+const parser = new Parser();
 
-export { ParserBase, Parser };
+export { parser, Parser };
