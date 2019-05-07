@@ -27,7 +27,7 @@
 	},
 	"devDependencies": {
 		"@types/react": "~16.8.16",
-		"@types/react-redux": "7.0.3",
+		"@types/react-redux": "7.0.8",
 		"del-cli": "1.1.0",
 		"react": "16.8.6",
 		"react-redux": "7.0.3",
