@@ -6,7 +6,7 @@
 		"experimentalDecorators": true,
 		"jsx": "react",
 		"lib": ["es2015", "dom"],
-		"module": "commonjs",
+		"module": "umd",
 		"moduleResolution": "node",
 		"noImplicitAny": true,
 		"noUnusedLocals": true,
@@ -14,12 +14,12 @@
 		"outDir": "./.publish",
 		// "outFile": "./.publish/index.js",
 		"pretty": true,
-		"sourceMap": true,
+		"sourceMap": false,
 		"inlineSourceMap": false,
 		"strict": true,
 		"strictNullChecks": true,
 		"target": "es5"
 	},
-	"include": ["index.ts", "./src"],
+	"include": ["./src"],
 	"exclude": ["node_modules", ".publish"]
 }
