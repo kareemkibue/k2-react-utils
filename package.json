@@ -11,7 +11,8 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "tsc -w",
-		"build": "del-cli -f .publish && tsc",
+		"build2": "del-cli -f .publish && tsc",
+		"build": "node_modules/.bin/gulp",
 		"npm:publish": "npm run build && npm test && npm run copy:packagejson && cd .publish && npm publish",
 		"copy:packagejson": "copy package.json .publish\\",
 		"copy:npmignore": "copy .npmignore .publish\\",
@@ -26,9 +27,15 @@
 		"react-redux": "*"
 	},
 	"devDependencies": {
+		"@babel/core": "7.4.4",
+		"@babel/preset-env": "7.4.4",
+		"@babel/preset-typescript": "7.3.3",
 		"@types/react": "~16.8.16",
 		"@types/react-redux": "7.0.8",
 		"del-cli": "1.1.0",
+		"gulp": "4.0.2",
+		"gulp-babel": "8.0.0-beta.2",
+		"gulp-cli": "2.2.0",
 		"react": "16.8.6",
 		"react-redux": "7.0.3",
 		"redux": "4.0.1",
