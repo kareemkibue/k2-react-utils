@@ -1,7 +1,7 @@
 /**
  * Classify Function - Returns a list of classes after an Evalution
  */
-export function classify(classObject: any): string {
+const classify = (classObject: any): string => {
 	let classList: string = '';
 
 	for (const i in classObject) {
@@ -11,4 +11,6 @@ export function classify(classObject: any): string {
 	}
 
 	return classList.trim();
-}
+};
+
+export { classify };
