@@ -1,8 +1,9 @@
 {
 	"name": "k2-react-utils",
-	"version": "0.12.1",
+	"version": "0.12.2",
 	"description": "A collection of handy React/JavaScript utilities",
 	"main": "index.js",
+	"types": "index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kareemkibue/k2-react-utils.git"
