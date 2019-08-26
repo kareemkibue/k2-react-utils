@@ -29,7 +29,7 @@
 		"@types/react-redux": "7.0.8",
 		"del-cli": "1.1.0",
 		"react": "16.8.6",
-		"react-redux": "7.0.3",
+		"react-redux": "7.1.1",
 		"redux": "4.0.1",
 		"typescript": "3.3.3333"
 	}
