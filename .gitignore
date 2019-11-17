@@ -10,6 +10,7 @@ bower_components/
 node_modules/
 .sass-cache/
 .tscache/
+package-lock.json
 
 #Conflict files
 *.orig
