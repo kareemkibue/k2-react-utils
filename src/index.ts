@@ -4,3 +4,7 @@ export * from './connect';
 export * from './Content';
 export * from './parser';
 export * from './hostEnv';
+export * from './useBrowserStorage';
+export * from './useDevice';
+export * from './useScroll';
+export * from './useViewport';
