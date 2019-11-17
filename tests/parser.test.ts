@@ -1,3 +1,1 @@
-describe('Parser', () => {
-	test('tbd', () => {});
-});
+test('tbd', () => { });

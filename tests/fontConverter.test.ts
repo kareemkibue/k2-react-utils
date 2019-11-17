@@ -1,3 +1,1 @@
-describe('Font Converter', () => {
-	test('tbd', () => {});
-});
+test('tbd', () => { });

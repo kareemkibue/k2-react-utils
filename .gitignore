@@ -11,6 +11,7 @@ node_modules/
 .sass-cache/
 .tscache/
 package-lock.json
+.cache/
 
 #Conflict files
 *.orig

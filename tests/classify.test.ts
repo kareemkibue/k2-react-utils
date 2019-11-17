@@ -1,3 +1,2 @@
-describe('classify', () => {
-	test('tbd', () => {});
-});
+
+test('tbd', () => { });
