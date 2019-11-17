@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const { useState, } = React
+const { useState } = React
 
 interface IBrowser {
     name: string;
