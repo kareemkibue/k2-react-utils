@@ -1,5 +1,5 @@
 /**
- * Classify Function - Returns a list of classes after an Evalution
+ * Classify - Returns a list of classes after an Evalution
  */
 const classify = (classObject: any): string => {
 	let classList: string = '';
