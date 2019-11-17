@@ -1,8 +1,9 @@
 {
 	"name": "k2-react-utils",
-	"version": "0.12.0",
+	"version": "0.12.2",
 	"description": "A collection of handy React/JavaScript utilities",
 	"main": "index.js",
+	"types": "index.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/kareemkibue/k2-react-utils.git"
@@ -22,7 +23,8 @@
 		"xml-js": "^1.6.1"
 	},
 	"peerDependencies": {
-		"react": "*"
+		"react": "*",
+		"react-redux": "*"
 	},
 	"devDependencies": {
 		"@types/react": "~16.9.11",
