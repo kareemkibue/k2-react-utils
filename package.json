@@ -17,7 +17,7 @@
         "build": "del-cli -f .publish && tsc",
         "test": "node_modules/.bin/jest --coverage --passWithNoTests",
         "test:watch": "node_modules/.bin/jest --watchAll --passWithNoTests",
-        "npm:copy": "node_modules/.bin/copyfiles yarn.lock readme.md .npmignore .publish",
+        "npm:copy": "node_modules/.bin/copyfiles package.json yarn.lock readme.md .npmignore .publish",
         "npm:prepare": "npm run build && npm test && npm run npm:copy",
         "npm:publish": "npm run npm:prepare && cd .publish && npm publish",
         "postpublish": "echo 'k2-React published successfully to NPM.' "
