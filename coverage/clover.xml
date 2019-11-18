@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1574098771858" clover="3.2.0">
-  <project timestamp="1574098771858" name="All files">
+<coverage generated="1574109566556" clover="3.2.0">
+  <project timestamp="1574109566556" name="All files">
     <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="18" coveredelements="18" complexity="0" loc="11" ncloc="11" packages="1" files="2" classes="2"/>
     <file name="Content.tsx" path="E:\public_html\k2-react-utils\src\Content.tsx">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>

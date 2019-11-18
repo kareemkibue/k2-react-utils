@@ -14,20 +14,20 @@ const useBrowserStorage = <TValue>(
 
     const getValueFromStorage = (): void => {
         if (storageType === "LOCAL") {
-            const cachedValue = localStorage.getItem(key) || '';
-            setStoredValue(JSON.parse(cachedValue));
+            const storedValue = localStorage.getItem(key) || '';
+            setStoredValue(getObjectValue(storedValue));
         }
         if (storageType === "LOCAL") {
-            const cachedValue = sessionStorage.getItem(key);
-            setStoredValue(cachedValue);
+            const storedValue = sessionStorage.getItem(key);
+            setStoredValue(getObjectValue(storedValue));
         }
     };
 
     const setValueToStorage = (valueToSet: TValue | any): void => {
         if (storageType === "LOCAL") {
-            localStorage.setItem(key, getObjectValue(valueToSet))
+            localStorage.setItem(key, JSON.stringify(valueToSet))
         } if (storageType === "SESSION") {
-            sessionStorage.setItem(key, getObjectValue(valueToSet))
+            sessionStorage.setItem(key, JSON.stringify(valueToSet))
         }
 
         setStoredValue(valueToSet);
@@ -46,7 +46,7 @@ const useBrowserStorage = <TValue>(
 
     const getObjectValue = (value: any): string => {
         try {
-            return JSON.stringify(value)
+            return JSON.parse(value)
         } catch (error) {
             return String(value)
         }

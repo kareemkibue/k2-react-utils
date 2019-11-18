@@ -11,7 +11,6 @@ const connect = (mapStateToProps: any, mapDispatchToProps?: any, mergeProps?: an
         return (target: any) => (reactRedux.connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(target) as any);
     } catch (error) {
         console.error(error)
-        throw new Error(error)
     }
 }
 
