@@ -35,6 +35,6 @@ jobs:
     - name: Publish
       run: 
         echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-        npm publish        
+        npm run npm:publish        
       env:
         CI: true
