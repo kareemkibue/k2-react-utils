@@ -37,3 +37,4 @@ jobs:
         npm run npm:publish        
       env:
         CI: true
+        NPM_TOKEN: secrets.NPM_TOKEN
