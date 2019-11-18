@@ -3,7 +3,7 @@ module.exports = {
 	transform: {
 		'^.+\\.tsx?$': 'ts-jest',
 	},
-	cacheDirectory: `.cache/dashboard/jest`,
+	cacheDirectory: `.cache/jest`,
 	clearMocks: true,
 	coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
 	globals: {

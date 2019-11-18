@@ -2,10 +2,9 @@ import * as React from 'react';
 
 const { useState, useEffect } = React
 
-const useBrowserStorage = <TValue>(
-    storageType: 'SESSION' | 'LOCAL',
-    key: string,
-): [TValue, (value: TValue) => void, () => void] => {
+
+
+const useBrowserStorage = <TValue>(storageType: 'SESSION' | 'LOCAL', key: string, ): [TValue, (value: TValue) => void, () => void] => {
     const [storedValue, setStoredValue] = useState<any>('');
 
     useEffect(() => {
