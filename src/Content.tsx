@@ -1,21 +1,17 @@
 import * as React from 'react';
 
-/** Interface for Content Props */
-interface IContentProps {
+interface IProps {
 	text: string;
 }
 
 /** Content Component with HTML sanitization */
-class Content extends React.Component<IContentProps, {}> {
-	private parseMarkup(rawHtml: string) {
+const Content: React.FunctionComponent<IProps> = (props) => {
+	const { text } = props;
+	const _parseMarkup = (rawHtml: string) => {
 		return { __html: rawHtml };
-	}
+	};
 
-	render() {
-		const { text } = this.props;
+	return <span dangerouslySetInnerHTML={_parseMarkup(text)} />;
+};
 
-		return <span dangerouslySetInnerHTML={this.parseMarkup(text)} />;
-	}
-}
-
-export { Content, IContentProps };
+export { Content, IProps as IContentProps };
