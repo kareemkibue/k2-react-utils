@@ -1,16 +1,10 @@
 import * as React from 'react';
 
-const { useState, useEffect } = React
+const { useState, } = React
 
-const useBrowserStorage = <TValue>(
-    storageType: 'SESSION' | 'LOCAL',
-    key: string,
-): [TValue, (value: TValue) => void, () => void] => {
-    const [storedValue, setStoredValue] = useState<any>('');
 
-    useEffect(() => {
-        getValueFromStorage();
-    }, []);
+
+const useBrowserStorage = <TValue>(storageType: 'SESSION' | 'LOCAL', key: string, ): [TValue, (value: TValue) => void, () => void] => {
 
     const getValueFromStorage = (): void => {
         if (storageType === "LOCAL") {
@@ -51,6 +45,8 @@ const useBrowserStorage = <TValue>(
             return String(value)
         }
     }
+
+    const [storedValue, setStoredValue] = useState<any>(getValueFromStorage());
 
     return [storedValue, setValueToStorage, clearValueFromStorage];
 };
