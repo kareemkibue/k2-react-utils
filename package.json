@@ -24,7 +24,8 @@
     },
     "peerDependencies": {
         "react": "*",
-        "react-redux": "*"
+        "react-redux": "*",
+        "xml-js": "*"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "4.2.4",
@@ -49,8 +50,5 @@
         "ts-jest": "24.0.0",
         "typescript": "3.7.2",
         "xml-js": "1.6.11"
-    },
-    "dependencies": {
-        "copy-cli": "1.2.1"
     }
 }
