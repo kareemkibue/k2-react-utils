@@ -17,6 +17,7 @@ const convertXmlToJson = (xmlNode: any): any => {
 
     } catch /* (error) */ {
         // console.error(error)
+        return
     }
 }
 
