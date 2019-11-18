@@ -1,6 +1,6 @@
 {
     "name": "k2-react-utils",
-    "version": "0.12.2",
+    "version": "0.13.0",
     "description": "A collection of handy React/JavaScript utilities",
     "main": "index.js",
     "types": "index.d.ts",
@@ -15,11 +15,10 @@
         "tsc:watch": "tsc -w",
         "clean": "del-cli -f node_modules && del-cli -f yarn.lock && yarn",
         "build": "del-cli -f .publish && tsc",
-        "npm:publish": "npm run build && npm test && npm run copy:packagejson && cd .publish && npm publish",
-        "copy:packagejson": "copy package.json .publish\\",
-        "copy:npmignore": "copy .npmignore .publish\\",
         "test": "node_modules/.bin/jest --coverage --passWithNoTests",
         "test:watch": "node_modules/.bin/jest --watchAll --passWithNoTests",
+        "prepare": "npm run build && npm test && cpy ['yarn.lock','.npmignore','readme.md'] '.publish' ",
+        "prepubilsh": "cd .publish",
         "postpublish": "echo 'k2-React published successfully to NPM.' "
     },
     "peerDependencies": {
