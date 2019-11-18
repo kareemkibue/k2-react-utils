@@ -13,6 +13,8 @@
         "moduleResolution": "node",
         "noImplicitAny": true,
         "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
         "noUnusedParameters": true,
         "outDir": "./.publish",
         // "outFile": "./.publish/index.js",
