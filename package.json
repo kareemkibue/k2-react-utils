@@ -17,8 +17,9 @@
         "build": "del-cli -f .publish && tsc",
         "test": "node_modules/.bin/jest --coverage --passWithNoTests",
         "test:watch": "node_modules/.bin/jest --watchAll --passWithNoTests",
-        "prepare": "npm run build && npm test && cpy ['yarn.lock','.npmignore','readme.md'] '.publish' ",
-        "prepubilsh": "cd .publish",
+        "npm:copy": "node_modules/.bin/copyfiles yarn.lock readme.md .npmignore .publish",
+        "npm:prepare": "npm run build && npm test && npm run npm:copy",
+        "npm:publish": "npm run npm:prepare && cd .publish && npm publish",
         "postpublish": "echo 'k2-React published successfully to NPM.' "
     },
     "peerDependencies": {
@@ -28,10 +29,12 @@
     "devDependencies": {
         "@testing-library/jest-dom": "4.2.4",
         "@types/jest": "24.0.9",
+        "@types/node": "12.12.8",
         "@types/react": "~16.9.11",
         "@types/react-redux": "7.1.5",
         "@types/react-test-renderer": "16.8.1",
         "babel-jest": "24.9.0",
+        "copyfiles": "2.1.1",
         "del-cli": "3.0.0",
         "jest": "24.9.0",
         "jest-dom": "3.1.2",
@@ -46,5 +49,8 @@
         "ts-jest": "24.0.0",
         "typescript": "3.7.2",
         "xml-js": "1.6.11"
+    },
+    "dependencies": {
+        "copy-cli": "1.2.1"
     }
 }

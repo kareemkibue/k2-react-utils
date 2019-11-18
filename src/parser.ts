@@ -15,8 +15,7 @@
 const convertXmlToJson = (xmlNode: any): any => {
 
     try {
-        var XmlJs = require('xml-js');
-        console.log({ XmlJs })
+        const XmlJs = require('xml-js');
 
         return JSON.parse(
             XmlJs.xml2json(xmlNode, {
@@ -27,9 +26,8 @@ const convertXmlToJson = (xmlNode: any): any => {
         );
 
     } catch (error) {
-        console.log({ error })
+        console.error(error)
     }
-
 }
 
 export { convertXmlToJson };
