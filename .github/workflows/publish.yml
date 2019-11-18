@@ -25,16 +25,21 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install packages
       run: |
-        yarn        
+        yarn    
+      env:
+        NPM_TOKEN: secrets.NPM_TOKEN            
     - name: Build
       run: |
         yarn build
+      env:
+        NPM_TOKEN: secrets.NPM_TOKEN                 
     - name: Test
       run: |
         yarn test 
+      env:
+        NPM_TOKEN: secrets.NPM_TOKEN                 
     - name: Publish
       run: 
-        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
         npm run npm:publish        
       env:
-        CI: true
+        NPM_TOKEN: ${{secrets.NPM_TOKEN}}
