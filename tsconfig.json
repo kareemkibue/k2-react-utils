@@ -1,25 +1,35 @@
 {
-	"compilerOptions": {
-		"declaration": true,
-		// "declarationDir": "./.publish/types",
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"jsx": "react",
-		"lib": ["es2015", "es2017", "dom"],
-		"module": "es6",
-		"moduleResolution": "node",
-		"noImplicitAny": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"outDir": "./.publish",
-		// "outFile": "index.js",
-		"pretty": true,
-		"sourceMap": false,
-		"inlineSourceMap": false,
-		"strict": true,
-		"strictNullChecks": true,
-		"target": "es5"
-	},
-	"include": ["index.ts", "./src"],
-	"exclude": ["node_modules", ".publish"]
+    "compilerOptions": {
+        "declaration": true,
+        // "declarationDir": "./.publish",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "jsx": "react",
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "outDir": "./.publish",
+        // "outFile": "./.publish/index.js",
+        "pretty": true,
+        "sourceMap": false,
+        "inlineSourceMap": false,
+        "strict": true,
+        "strictNullChecks": true,
+        "target": "es5"
+    },
+    "include": [
+        "./src",
+        "./global.d.ts"
+    ],
+    "exclude": [
+        "./tests/",
+        "node_modules",
+        ".publish"
+    ]
 }

@@ -1,26 +1,24 @@
-import * as XmlJs from 'xml-js';
-
 /**
  * A Parser utility that converts XML<=>JSON built by Nashwaan
  * XML-Js Library - https://github.com/nashwaan/xml-js
  */
-class ParserBase {
-	/** ! to be Deprecated  */
-	xmlToJson(xmlNode: any): any {
-		return this.convertXmlToJson(xmlNode);
-	}
+const convertXmlToJson = (xmlNode: any): any => {
 
-	convertXmlToJson(xmlNode: any): any {
-		return JSON.parse(
-			XmlJs.xml2json(xmlNode, {
-				compact: true,
-				ignoreComment: true,
-				spaces: 4,
-			})
-		);
-	}
+    try {
+        const XmlJs = require('xml-js');
+
+        return JSON.parse(
+            XmlJs.xml2json(xmlNode, {
+                compact: true,
+                ignoreComment: true,
+                spaces: 4,
+            })
+        );
+
+    } catch (error) {
+        console.error(error)
+        throw new Error(error)
+    }
 }
 
-const Parser = new ParserBase();
-
-export { ParserBase, Parser };
+export { convertXmlToJson };
