@@ -3,6 +3,7 @@ import * as React from 'react';
 
 const { useEffect, useState } = React
 
+
 interface IUseViewport {
     viewportWidth: number;
     viewportHeight: number;

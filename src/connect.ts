@@ -6,11 +6,14 @@
  */
 const connect = (mapStateToProps: any, mapDispatchToProps?: any, mergeProps?: any, options?: any) => {
     try {
-        const reactRedux = require('xml-js');
+        const reactRedux = require('react-redux');
+
         return (target: any) => (reactRedux.connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(target) as any);
     } catch (error) {
         console.error(error)
+        throw new Error(error)
     }
 }
+
 
 export { connect }
