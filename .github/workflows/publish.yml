@@ -34,7 +34,6 @@ jobs:
         yarn test 
     - name: Publish
       run: 
-        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
         npm run npm:publish        
       env:
         CI: true
