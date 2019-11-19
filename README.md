@@ -132,7 +132,7 @@ class Header: React.Component<IStateProps>{
 
 ----
 
-### `fontConverter` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/fontConverter.tsx)
+### `fontUnitConverter` (convertPixelsToRem, convertPixelsToEm) - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/fontUnitConverter.tsx)
 
 A utility that converts pixels to rem/em units.
 
