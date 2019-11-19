@@ -57,10 +57,10 @@ text | string (required) | Returns a DOM node with a `<span/>` wrapper
 import * as React from 'react'; // standard TypeScript syntax
 import { Content } from 'k2-react-utils';
 
-const Post: React.FunctionCompoennt<{}>=()=>{
+const Post: React.FunctionComponent<{}>=()=>{
     const stringifiedMarkup:string = "<p>A Lion from Lannisport, and the sheep from the North</p>";
 
-    return <Content text={stringifiedMarkup} />;
+    return <Content text={stringifiedMarkup} />;  // returns a DOM node
 }
 ```
 
@@ -82,7 +82,7 @@ classObject | Object (required) | -
 import * as React from 'react'; // standard TypeScript syntax
 import { classify } from 'k2-react-utils';
 
-const Post: React.FunctionCompoennt<{}>=()=>{
+const Post: React.FunctionComponent<{}>=()=>{
     const classNames = classify({
         'js-active': true,
         'js-focus': false
@@ -129,6 +129,39 @@ class Header: React.Component<IStateProps>{
 *Alternatives*
 - With [`react-redux@7.0.0`](https://www.npmjs.com/package/react-redux) comes the [`useSelector`](https://react-redux.js.org/next/api/hooks#useselector) hook which with less effort connect to your `redux` store. 
 - The `@connect` util would be ideal when working with stateful class components that would need to be connected to the store.
+
+----
+
+### `fontConverter` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/fontConverter.tsx)
+
+A utility that converts pixels to rem/em units.
+
+**Dependencies:** none
+
+Paramters | Type | Description
+---|---|---
+pixelValue | string (required) | Value to be converted into em/rem unitls
+baseFontSize | string (optional) - default '16px' | root pixel value, set on the `<html>` or `<body>` tag
+
+
+*Usage*
+```ts
+// font-settings 
+import { convertPixelsToRem, convertPixelsToEm } from 'k2-react-utils';
+
+const remFontSizes = {
+    '16px': convertPixelsToRem('16px', '10px');
+    '20px': convertPixelsToRem('20px', '10px');
+};
+
+const emFontSizes = {
+    '16px': convertPixelsToEm('16px');
+    '18px': convertPixelsToEm('18px');
+};
+
+```
+
+---
 
 
 ## Contributing
