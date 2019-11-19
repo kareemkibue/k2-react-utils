@@ -150,19 +150,71 @@ baseFontSize | string (optional) - default '16px' | root pixel value, set on the
 import { convertPixelsToRem, convertPixelsToEm } from 'k2-react-utils';
 
 const remFontSizes = {
-    '16px': convertPixelsToRem('16px', '10px');
-    '20px': convertPixelsToRem('20px', '10px');
+    f16: convertPixelsToRem('16px', '10px');
+    f20: convertPixelsToRem('20px', '10px');
 };
 
 const emFontSizes = {
-    '16px': convertPixelsToEm('16px');
-    '18px': convertPixelsToEm('18px');
+    f16: convertPixelsToEm('16px');
+    f18: convertPixelsToEm('18px');
 };
+
+// Styled Component
+import styled from 'styled-components';
+import {remFontSizes as fontSizes} from './fontSettings';
+
+const Title = styled`
+    font-size: ${fontSizes.f16}; // DOM output => font-size: 1.6rem;
+`;
 
 ```
 
 ---
 
+
+### `hostEnv` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/hostEnv.ts)
+
+A helper that returns the environment host   
+
+**Dependencies:** none
+
+Paramters | Type | Description
+---|---|---
+host | string (optional), default `location.host` | -
+
+
+*Usage*
+```tsx
+// settings
+import * as React from 'react'; // standard TypeScript syntax
+import { hostEnv } from 'k2-react-utils';
+
+const Post: React.FunctionComponent<{}>=()=>{
+    React.useEffect(()=>{
+        if (hostEnv.isLocal){
+           window.fetch(getUrl())
+        }
+    },[])
+
+    const getUrl = (): string =>{
+        if (hostEnv.isLocal){
+            return 'http//dev.somesite.com/api/people'
+        }
+        else if (hostEnv.host === "uat1.somesite.com"){
+            return 'http//uat.somesite.com/api/people';
+        }
+
+        return '/api/people'
+    }
+
+    return <div/>; 
+}
+```
+
+*Alternatives*
+- Consider using client-side environment variables [configurable](https://medium.com/@trekinbami/using-environment-variables-in-react-6b0a99d83cf5) via an `.env` file.
+
+---
 
 ## Contributing
 - Run `yarn` on the root of the repository.
