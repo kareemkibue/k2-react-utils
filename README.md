@@ -82,7 +82,7 @@ classObject | Object (required) | -
 import * as React from 'react'; // standard TypeScript syntax
 import { classify } from 'k2-react-utils';
 
-const Post: React.FunctionComponent<{}>=()=>{
+const MyComponent: React.FunctionComponent<{}>=()=>{
     const classNames = classify({
         'js-active': true,
         'js-focus': false
@@ -118,10 +118,10 @@ interface IStateProps{
 @connect((state: IAppState)=>({
     locale: state.locale
 }))
-class Header: React.Component<IStateProps>{
+class MyComponent: React.Component<IStateProps>{
     render(){
         const {locale}=this.props;
-        return <header>{locale.region}<header/>;
+        return <div>{locale.region}<div/>;
     }
 }
 ```
@@ -163,7 +163,7 @@ const emFontSizes = {
 import styled from 'styled-components';
 import {remFontSizes as fontSizes} from './fontSettings';
 
-const Title = styled`
+const MyComponent = styled`
     font-size: ${fontSizes.f16}; // DOM output => font-size: 1.6rem;
 `;
 
@@ -174,26 +174,23 @@ const Title = styled`
 
 ### `hostEnv` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/hostEnv.ts)
 
-A helper that returns the environment host   
+A util that returns an object denoting the current `hostname` and a boolean value, `isLocal`.
 
 **Dependencies:** none
 
 Paramters | Type | Description
 ---|---|---
-host | string (optional), default `location.host` | -
+host | string (optional), default `window.location.host` | -
 
 
 *Usage*
 ```tsx
-// settings
 import * as React from 'react'; // standard TypeScript syntax
 import { hostEnv } from 'k2-react-utils';
 
-const Post: React.FunctionComponent<{}>=()=>{
-    React.useEffect(()=>{
-        if (hostEnv.isLocal){
-           window.fetch(getUrl())
-        }
+const MyComponent: React.FunctionComponent<{}>=()=>{
+    React.useEffect(()=>{        
+        window.fetch(getUrl());
     },[])
 
     const getUrl = (): string =>{
