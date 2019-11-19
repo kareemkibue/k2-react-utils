@@ -149,19 +149,21 @@ baseFontSize | string (optional) - default '16px' | root pixel value, set on the
 // font-settings 
 import { convertPixelsToRem, convertPixelsToEm } from 'k2-react-utils';
 
-const remFontSizes = {
+// either 
+const fontSizes = {
     f16: convertPixelsToRem('16px', '10px');
     f20: convertPixelsToRem('20px', '10px');
 };
 
-const emFontSizes = {
+// or for ems
+const fontSizes = {
     f16: convertPixelsToEm('16px');
     f18: convertPixelsToEm('18px');
 };
 
 // Styled Component
 import styled from 'styled-components';
-import {remFontSizes as fontSizes} from './fontSettings';
+import { fontSizes } from './fontSettings';
 
 const MyComponent = styled`
     font-size: ${fontSizes.f16}; // DOM output => font-size: 1.6rem;
