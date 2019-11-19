@@ -2,7 +2,7 @@ let reactRedux: any;
 
 try {
     reactRedux = require('react-redux')
-} catch (er) {
+} catch (error) {
     reactRedux = null
 }
 
