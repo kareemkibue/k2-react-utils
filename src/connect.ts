@@ -2,7 +2,7 @@
 
 /**
  * react-redux connect decorator implementation for Typescript
- * Suppressses @types/react-redux issue when using connect as a decorator
+ * Suppresses @types/react-redux issue when using connect as a decorator
  */
 const connect = (mapStateToProps: any, mapDispatchToProps?: any, mergeProps?: any, options?: any) => {
     try {

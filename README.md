@@ -99,7 +99,7 @@ const MyComponent: React.FunctionComponent<{}>=()=>{
 
 ### `connect` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/connect.ts)
 
-A re-implementation of `react-redux`'s connect which suppressses `@types/react-redux` issues when using `connect` as a decorator to connect class components in TypeScript 2/3.
+A re-implementation of `react-redux`'s connect which suppresses `@types/react-redux` issues when using `connect` as a decorator to connect class components in TypeScript 2/3.
 
 **Dependencies:** `react`, `react-dom`, `react-redux`
 
@@ -109,7 +109,7 @@ See `connect`'s parameters here: https://react-redux.js.org/api/connect#connect-
 ```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { connect } from 'k2-react-utils';
-import { IAppState, ILocale } from 'models'; // your local store, aliased
+import { IAppState, ILocale } from './models'; 
 
 interface IStateProps{
     locale: ILocale
