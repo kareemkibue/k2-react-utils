@@ -53,7 +53,7 @@ text | string (required) | Returns a DOM node with a `<span/>` wrapper
 
 
 *Usage*
-```
+```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { Content } from 'k2-react-utils';
 
@@ -63,6 +63,8 @@ const Post: React.FunctionCompoennt<{}>=()=>{
     return <Content text={stringifiedMarkup} />;
 }
 ```
+
+---
 
 ### `classify` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/classify.ts)
 
@@ -76,7 +78,7 @@ classObject | Object (required) | -
 
 
 *Usage*
-```
+```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { classify } from 'k2-react-utils';
 
@@ -93,6 +95,8 @@ const Post: React.FunctionCompoennt<{}>=()=>{
 *Alternatives*
 - This util would be helpful when to working imperively with CSS classes, example when authoring libraries. [`styled-components`](https://www.styled-components.com/) is a much preferred alternative when styling React components.
 
+---
+
 ### `connect` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/connect.ts)
 
 A re-implementation of `react-redux`'s connect which suppressses `@types/react-redux` issues when using `connect` as a decorator to connect class components in TypeScript 2/3.
@@ -102,7 +106,7 @@ A re-implementation of `react-redux`'s connect which suppressses `@types/react-r
 See `connect`'s parameters here: https://react-redux.js.org/api/connect#connect-parameters
 
 *Usage*
-```
+```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { connect } from 'k2-react-utils';
 import { IAppState, ILocale } from 'models'; // your local store, aliased
