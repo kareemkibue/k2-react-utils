@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1574115972358" clover="3.2.0">
-  <project timestamp="1574115972358" name="All files">
+<coverage generated="1574190114397" clover="3.2.0">
+  <project timestamp="1574190114398" name="All files">
     <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3" elements="18" coveredelements="18" complexity="0" loc="11" ncloc="11" packages="1" files="2" classes="2"/>
-    <file name="Content.tsx" path="E:\public_html\k2-react-utils\src\Content.tsx">
+    <file name="Content.tsx" path="C:\public_html\personal\k2-react-utils\src\Content.tsx">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="1" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
@@ -12,7 +12,7 @@
       <line num="14" count="1" type="stmt"/>
       <line num="17" count="1" type="stmt"/>
     </file>
-    <file name="hostEnv.ts" path="E:\public_html\k2-react-utils\src\hostEnv.ts">
+    <file name="hostEnv.ts" path="C:\public_html\personal\k2-react-utils\src\hostEnv.ts">
       <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
       <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
       <line num="2" count="2" type="cond" truecount="2" falsecount="0"/>
