@@ -24,6 +24,9 @@
     },
     "peerDependencies": {
         "react": "*",
+        "react-dom": "*"
+    },
+    "optionalDependencies": {
         "react-redux": "*",
         "xml-js": "*"
     },
