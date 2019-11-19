@@ -31,7 +31,7 @@ npm i -S -E k2-react-utils
     - `react@16.8.0+` would have to be installed if any of the hooks are used
 - [`react-dom`](https://github.com/facebook/react/tree/master/packages/react-dom)
 
-#### `optionalDependencies`
+### `optionalDependencies`
 - [`react-redux`](https://github.com/reduxjs/react-redux)
 - [`xml-js`](https://github.com/nashwaan/xml-js) 
 
@@ -41,7 +41,7 @@ Type definitions come bundled in.
 
 `k2-react-utils` barrels (re-exports) the following utils and hooks as named exports:
 
-`<Content/>` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/Content.tsx)
+### `<Content/>` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/Content.tsx)
 
 A component that performs HTML sanitization.
 
@@ -54,7 +54,7 @@ text | string (required) | Returns a DOM node with a `<span/>` wrapper
 
 *Usage*
 ```
-import * as React from 'react'; // TypeScript syntax
+import * as React from 'react'; // standard TypeScript syntax
 import { Content } from 'k2-react-utils';
 
 const Post: React.FunctionCompoennt<{}>=()=>{
@@ -64,7 +64,7 @@ const Post: React.FunctionCompoennt<{}>=()=>{
 }
 ```
 
-`classify` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/classify.ts)
+### `classify` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/classify.ts)
 
 A function that takes in an object of classes along with conditionals, and returns a string of classnames
 
@@ -77,7 +77,7 @@ classObject | Object (required) | -
 
 *Usage*
 ```
-import * as React from 'react'; // TypeScript syntax
+import * as React from 'react'; // standard TypeScript syntax
 import { classify } from 'k2-react-utils';
 
 const Post: React.FunctionCompoennt<{}>=()=>{
@@ -93,7 +93,7 @@ const Post: React.FunctionCompoennt<{}>=()=>{
 *Alternatives*
 - This util would be helpful when to working imperively with CSS classes, example when authoring libraries. [`styled-components`](https://www.styled-components.com/) is a much preferred alternative when styling React components.
 
-`connect` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/connect.ts)
+### `connect` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/connect.ts)
 
 A re-implementation of `react-redux`'s connect which suppressses `@types/react-redux` issues when using `connect` as a decorator to connect class components in TypeScript 2/3.
 
@@ -103,7 +103,7 @@ See `connect`'s parameters here: https://react-redux.js.org/api/connect#connect-
 
 *Usage*
 ```
-import * as React from 'react'; // TypeScript syntax
+import * as React from 'react'; // standard TypeScript syntax
 import { connect } from 'k2-react-utils';
 import { IAppState, ILocale } from 'models'; // your local store, aliased
 
