@@ -4,6 +4,11 @@
     "description": "A collection of handy React/JavaScript utilities",
     "main": "index.js",
     "types": "index.d.ts",
+    "keywords": [
+        "utils",
+        "react",
+        "hooks"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/kareemkibue/k2-react-utils.git"
