@@ -215,6 +215,33 @@ const MyComponent: React.FunctionComponent<{}>=()=>{
 
 ---
 
+### `convertXmlToJson` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/parser.ts)
+
+A function that converts xml into json.
+
+**Dependencies:** [xml-js](https://github.com/nashwaan/xml-js)
+
+Parameters | Type | Description
+---|---|---
+xmlNode | xml (required) | - 
+
+
+*Usage*
+```ts
+import { convertXmlToJson } from 'k2-react-utils';
+
+const xmlNode = `<xml>
+    <title>Aerys</title>
+</xml>`
+
+convertXmlToJson(xmlNode); 
+```
+
+----
+
+
+
+
 ## Contributing
 - Run `yarn` on the root of the repository.
 - Run `yarn start` to start the project.
