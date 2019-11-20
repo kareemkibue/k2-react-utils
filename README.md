@@ -225,7 +225,6 @@ Parameters | Type | Description
 ---|---|---
 xmlNode | xml (required) | - 
 
-
 *Usage*
 ```ts
 import { convertXmlToJson } from 'k2-react-utils';
@@ -238,6 +237,44 @@ convertXmlToJson(xmlNode);
 ```
 
 ----
+
+
+
+----
+
+
+### `useBrowserStorage` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useBrowserStorage.ts)
+
+A hook that performs getting, setting and clearing of values to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) and [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
+
+**Dependencies:** `react`, `react-dom`
+
+Parameters | Type | Description
+---|---|---
+storageType | 'LOCAL' | 'SESSION' (required) | context, point to localStorage, or sessionStorage
+key | string (required) | property name to used in either local or session storage
+
+
+*Usage*
+```tsx
+import * as React from 'react'; // standard TypeScript syntax
+import { useEffect } from 'react';
+import { useBrowserStorage } from 'k2-react-utils';
+
+const MyComponent: React.FunctionComponent<{}>=()=>{
+    const [isUndead, setIsUndead, clearIsUndead ] = useBrowserStorage<boolean>('SESSION', 'isUndead');
+
+    useEffect(()=>{
+        setIsUndead(false);
+
+        ()=>{
+            clearIsUndead();
+        }
+    },[])
+
+    return <div>Xhoan Daxos is {isUndead}</div>;
+}
+```
 
 
 
