@@ -238,11 +238,6 @@ convertXmlToJson(xmlNode);
 
 ----
 
-
-
-----
-
-
 ### `useBrowserStorage` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useBrowserStorage.ts)
 
 A hook that performs getting, setting and clearing of values to [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) and [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage).
@@ -274,9 +269,60 @@ const MyComponent: React.FunctionComponent<{}>=()=>{
 
     return <div>Xhoan Daxos is {isUndead}</div>;
 }
+
 ```
 
+<!--
 
+----
+
+### `useDevice` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useDevice.ts)
+
+A hook that .
+
+**Dependencies:** `react`, `react-dom`
+
+
+*Usage*
+```tsx
+import * as React from 'react'; // standard TypeScript syntax
+import { useEffect } from 'react';
+import { useDevice } from 'k2-react-utils';
+
+const MyComponent: React.FunctionComponent<{}>=()=>{
+    const { browser, version, platform } = useDevice();
+
+    useEffect(()=>{
+        setIsUndead(false);
+
+        ()=>{
+            clearIsUndead();
+        }
+    },[])
+
+    return <div>Daxos is {isUndead}</div>;
+}
+-->
+
+
+### `useScroll` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useScroll.ts)
+
+A hook that returns the y-position on scroll.
+
+**Dependencies:** `react`, `react-dom`
+
+*Usage*
+```tsx
+import * as React from 'react'; // standard TypeScript syntax
+import { useScroll } from 'k2-react-utils';
+
+const MyComponent: React.FunctionComponent<{}>=()=>{
+    const { verticalScrollPosition } = useScroll();
+
+    return <div>Vertical scroll position {verticalScrollPosition}</div>;
+}
+
+```
 
 
 ## Contributing
