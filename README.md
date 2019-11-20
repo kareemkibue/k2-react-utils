@@ -12,11 +12,10 @@ A collection of standalone ES6 ReactJS utilities and hooks, written in TypeScrip
 - [Development](#development)
 <!-- - [Changelog](#Changelog) -->
 
-
 ## Setup
 This ES5 module is distributed via [npm](https://www.npmjs.com/package/k2-react-utils) and should be installed as a production dependency.
 
-Using _yarn_ (recommended)
+Using _yarn_ (preferred)
 ```
 yarn add -E k2-react-utils
 ```
@@ -28,7 +27,7 @@ npm i -S -E k2-react-utils
 
 ### `peerDependencies`
 - [`react`](https://github.com/facebook/react)
-    - `react@16.8.0+` would have to be installed if any of the hooks are used
+    - `react@16.8.0+` would be required to use either `useBrowserStorage`, `useViewport` or `useScroll` hooks.
 - [`react-dom`](https://github.com/facebook/react/tree/master/packages/react-dom)
 
 ### `optionalDependencies`
