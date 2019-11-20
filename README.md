@@ -9,8 +9,8 @@ A collection of standalone ES6 ReactJS utilities and hooks, written in TypeScrip
 <!-- - [Problem Statement](#problem-statement)-->
 - [Setup](#setup)
 - [Documentation (API)](#documentation-(api))
-- [Contributing](#contributing)
-- [Changelog](#Changelog)
+- [Development](#development)
+<!-- - [Changelog](#Changelog) -->
 
 
 ## Setup
@@ -351,11 +351,12 @@ const MyComponent: React.FunctionComponent<{}>=()=>{
 ----
 
 
-## Contributing
+## Development
 - Run `yarn` on the root of the repository.
 - Run `yarn start` to start the project.
 - Run `yarn test:watch` to ammend tests.
 
+<!--
 ## Changelog
 
 Version | Log
@@ -363,3 +364,4 @@ Version | Log
 0.12.0 | - Update build<br/>- Deprecate `<Icon/>` util component
 0.11.0 | - Add `getEnvHost` util
 0.5.0 | - Update folder structure,<br/>- Update package name on NPM
+-->

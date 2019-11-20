@@ -8,8 +8,7 @@ const useBrowserStorage = <TValue>(storageType: BrowserStorageType, key: string,
     const [storedValue, setStoredValue] = useState<any>(browserStorage.getStoredValue(storageType, key));
 
     const setValueToStorage = (valueToSet: TValue | any): void => {
-        browserStorage.setValue(storageType, key, valueToSet)
-
+        browserStorage.setValue(storageType, key, valueToSet);
         setStoredValue(valueToSet);
     };
 
