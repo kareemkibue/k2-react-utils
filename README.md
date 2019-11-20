@@ -51,7 +51,7 @@ Props | Type | Description
 text | string (required) | Returns a DOM node with a `<span/>` wrapper
 
 
-*Usage*
+#### Usage
 ```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { Content } from 'k2-react-utils';
@@ -76,7 +76,7 @@ Parameters | Type | Description
 classObject | Object (required) | - 
 
 
-*Usage*
+#### Usage
 ```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { classify } from 'k2-react-utils';
@@ -104,7 +104,7 @@ A re-implementation of `react-redux`'s connect which suppresses `@types/react-re
 
 See `connect`'s parameters here: https://react-redux.js.org/api/connect#connect-parameters
 
-*Usage*
+#### Usage
 ```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { connect } from 'k2-react-utils';
@@ -143,7 +143,7 @@ pixelValue | string (required) | Value to be converted into em/rem unitls
 baseFontSize | string (optional) - default '16px' | root pixel value, set on the `<html>` or `<body>` tag
 
 
-*Usage*
+#### Usage
 ```ts
 // font-settings 
 import { convertPixelsToRem, convertPixelsToEm } from 'k2-react-utils';
@@ -184,7 +184,7 @@ Paramters | Type | Description
 host | string (optional), default `window.location.host` | -
 
 
-*Usage*
+#### Usage
 ```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { hostEnv } from 'k2-react-utils';
@@ -224,7 +224,7 @@ Parameters | Type | Description
 ---|---|---
 xmlNode | xml (required) | - 
 
-*Usage*
+#### Usage
 ```ts
 import { convertXmlToJson } from 'k2-react-utils';
 
@@ -249,7 +249,7 @@ storageType | 'LOCAL' \| 'SESSION' (required) | context, point to localStorage, 
 key | string (required) | property name to used in either local or session storage
 
 
-*Usage*
+#### Usage
 ```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { useEffect } from 'react';
@@ -282,7 +282,7 @@ A hook that .
 **Dependencies:** `react`, `react-dom`
 
 
-*Usage*
+#### Usage
 ```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { useEffect } from 'react';
@@ -310,7 +310,7 @@ A hook that returns the y-position on scroll.
 
 **Dependencies:** `react`, `react-dom`
 
-*Usage*
+#### Usage
 ```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { useScroll } from 'k2-react-utils';
@@ -331,7 +331,7 @@ A hook that returns the current viewport's width and height.
 
 **Dependencies:** `react`, `react-dom`
 
-*Usage*
+#### Usage
 ```tsx
 import * as React from 'react'; // standard TypeScript syntax
 import { useViewport } from 'k2-react-utils';
