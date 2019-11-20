@@ -8,7 +8,7 @@ A collection of standalone ES6 ReactJS utilities and hooks, written in TypeScrip
 ## Table of Contents
 <!-- - [Problem Statement](#problem-statement)-->
 - [Setup](#setup)
-- [Documentation (API)](#documentation-(api))
+- [Documentation](#documentation)
 - [Development](#development)
 <!-- - [Changelog](#Changelog) -->
 
@@ -37,7 +37,7 @@ npm i -S -E k2-react-utils
 
 Type definitions come bundled in.
 
-## Documentation (API)
+## Documentation 
 
 `k2-react-utils` barrels (re-exports) the following utils and hooks as named exports:
 
