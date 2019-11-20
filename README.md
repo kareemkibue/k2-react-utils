@@ -246,7 +246,7 @@ A hook that performs getting, setting and clearing of values to [localStorage](h
 
 Parameters | Type | Description
 ---|---|---
-storageType | 'LOCAL' | 'SESSION' (required) | context, point to localStorage, or sessionStorage
+storageType | 'LOCAL' \| 'SESSION' (required) | context, point to localStorage, or sessionStorage
 key | string (required) | property name to used in either local or session storage
 
 
@@ -269,12 +269,12 @@ const MyComponent: React.FunctionComponent<{}>=()=>{
 
     return <div>Xhoan Daxos is {isUndead}</div>;
 }
-
 ```
+
+----
 
 <!--
 
-----
 
 ### `useDevice` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useDevice.ts)
 
@@ -323,6 +323,32 @@ const MyComponent: React.FunctionComponent<{}>=()=>{
 }
 
 ```
+
+-----
+
+### `useViewport` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useViewport.ts)
+
+A hook that returns the current viewport's width and height.
+
+**Dependencies:** `react`, `react-dom`
+
+*Usage*
+```tsx
+import * as React from 'react'; // standard TypeScript syntax
+import { useViewport } from 'k2-react-utils';
+
+const MyComponent: React.FunctionComponent<{}>=()=>{
+    const { viewportWidth, viewportHeight, documentHeight } = useViewport();
+
+    return <div>
+        width: {viewportWidth}, 
+        height: {viewportHeight},
+        documentHeight: {documentHeight},
+    </div>;
+}
+```
+
+----
 
 
 ## Contributing
