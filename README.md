@@ -47,8 +47,9 @@ npm i -S -E k2-react-utils
 ### `peerDependencies`
 
 - [`react`](https://github.com/facebook/react)
-  - `react@16.8.0+` would be required to use either `useBrowserStorage`, `useViewport` or `useScroll` hooks.
 - [`react-dom`](https://github.com/facebook/react/tree/master/packages/react-dom)
+
+**Note:** `react@^16.8.0` would be required when using hook utils.
 
 ### `optionalDependencies`
 
@@ -153,6 +154,27 @@ _Alternatives_
 
 - With [`react-redux@7.0.0`](https://www.npmjs.com/package/react-redux) comes the [`useSelector`](https://react-redux.js.org/next/api/hooks#useselector) hook which with less effort connect to your `redux` store.
 - The `@connect` util would be ideal when working with stateful class components that would need to be connected to the store.
+
+---
+
+### `deviceService` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/device.ts)
+
+A service that identifies the device's current browser, operating system or platform (desktop or mobile) via three getters; `getBrowserName`, `getOperatingSystem`, `getPlatform`.
+
+#### Usage
+
+```ts
+import * as React from "react"; // standard TypeScript syntax
+import {
+  getBrowserName,
+  getOperatingSystem,
+  getPlatform
+} from "k2-react-utils";
+
+getBrowserName(); // sample, "chrome"
+getOperatingSystem(); // sample, "windows"
+getPlatform(); // sample, "desktop"
+```
 
 ---
 
@@ -300,36 +322,43 @@ const MyComponent: React.FunctionComponent<{}> = () => {
 
 ---
 
-<!--
-
-
 ### `useDevice` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useDevice.ts)
 
-A hook that .
+A hook that identifies the device's current browser, operating system or platform (desktop or mobile).
 
-**Dependencies:** `react`, `react-dom`
-
+**Dependencies:** `react`
 
 #### Usage
+
 ```tsx
-import * as React from 'react'; // standard TypeScript syntax
-import { useEffect } from 'react';
-import { useDevice } from 'k2-react-utils';
+import * as React from "react"; // standard TypeScript syntax
+import { useDevice } from "k2-react-utils";
 
-const MyComponent: React.FunctionComponent<{}>=()=>{
-    const { browser, version, platform } = useDevice();
+const MyComponent: React.FunctionComponent<{}> = () => {
+  const { browserName, operatingSystem, platform } = useDevice();
 
-    useEffect(()=>{
-        setIsUndead(false);
+  return (
+    <table>
+      <tbody>
+        <tr>
+          <td>Browser</td>
+          <td>{browserName}</td> // sample, "chrome"
+        </tr>
+        <tr>
+          <td>OS</td>
+          <td>{operatingSystem}</td> // sample, "windows"
+        </tr>
+        <tr>
+          <td>OS</td>
+          <td>{platform}</td> // sample, "desktop"
+        </tr>
+      </tbody>
+    </table>
+  );
+};
+```
 
-        ()=>{
-            clearIsUndead();
-        }
-    },[])
-
-    return <div>Daxos is {isUndead}</div>;
-}
--->
+---
 
 ### `useScroll` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useScroll.ts)
 
