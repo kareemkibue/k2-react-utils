@@ -1,6 +1,6 @@
 {
     "name": "k2-react-utils",
-    "version": "0.13.4",
+    "version": "0.14.0",
     "description": "A collection of handy React/JavaScript utilities",
     "main": "index.js",
     "types": "index.d.ts",
@@ -38,6 +38,7 @@
     "devDependencies": {
         "@testing-library/jest-dom": "4.2.4",
         "@testing-library/react": "9.3.2",
+        "@testing-library/react-hooks": "3.2.1",
         "@types/jest": "24.0.9",
         "@types/node": "12.12.8",
         "@types/react": "16.9.11",
