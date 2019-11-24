@@ -29,11 +29,11 @@ const getBrowserName = (userAgent: string = navigator.userAgent): BrowserName =>
     if (userAgent.match(/edge/i)) {
         return 'edge'
     }
-    if (userAgent.match(/chrome/i)) {
-        return 'chrome'
-    }
     if (userAgent.match(/chromium/i)) {
         return 'chromium'
+    }
+    if (userAgent.match(/chrome/i)) {
+        return 'chrome'
     }
     if (userAgent.match(/firefox/i)) {
         return 'firefox'
