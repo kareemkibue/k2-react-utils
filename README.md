@@ -268,10 +268,10 @@ A hook that performs getting, setting and clearing of values to [localStorage](h
 
 **Dependencies:** `react`, `react-dom`
 
-| Parameters  | Type                            | Description                                              |
-| ----------- | ------------------------------- | -------------------------------------------------------- |
-| storageType | 'LOCAL' \| 'SESSION' (required) | context, point to localStorage, or sessionStorage        |
-| key         | string (required)               | property name to used in either local or session storage |
+| Parameters  | Type                                   | Description                                              |
+| ----------- | -------------------------------------- | -------------------------------------------------------- |
+| storageType | 'LOCAL' \| 'SESSION' (required)        | context, point to localStorage, or sessionStorage        |
+| key         | string \| number \| boolean (required) | property name to used in either local or session storage |
 
 #### Usage
 
@@ -294,7 +294,7 @@ const MyComponent: React.FunctionComponent<{}> = () => {
     };
   }, []);
 
-  return <div>Xhoan Daxos is {isUndead}</div>;
+  return <div>Xhoan Daxos is Undead: {isUndead}</div>;
 };
 ```
 
@@ -333,7 +333,7 @@ const MyComponent: React.FunctionComponent<{}>=()=>{
 
 ### `useScroll` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useScroll.ts)
 
-A hook that returns the y-position on scroll.
+A hook that returns the y-position (integer) on scroll.
 
 **Dependencies:** `react`, `react-dom`
 
@@ -346,7 +346,7 @@ import { useScroll } from "k2-react-utils";
 const MyComponent: React.FunctionComponent<{}> = () => {
   const { verticalScrollPosition } = useScroll();
 
-  return <div>Vertical scroll position {verticalScrollPosition}</div>;
+  return <div>Vertical scroll position {verticalScrollPosition}</div>; // 0
 };
 ```
 
@@ -354,7 +354,7 @@ const MyComponent: React.FunctionComponent<{}> = () => {
 
 ### `useViewport` - [source](https://github.com/kareemkibue/k2-react-utils/blob/master/src/useViewport.ts)
 
-A hook that returns the current viewport's width and height.
+A hook that returns the current viewport's width, height and the document's scrollable height (as integers).
 
 **Dependencies:** `react`, `react-dom`
 

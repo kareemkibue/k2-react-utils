@@ -5,6 +5,7 @@ export * from './Content';
 export * from './parser';
 export * from './hostEnv';
 export * from './useBrowserStorage';
-export * from './useDevice';
+// export * from './useDevice';
+export * from './deviceService';
 export * from './useScroll';
 export * from './useViewport';
