@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
     BrowserName, getBrowserName, getOperatingSystem, getPlatform, OperatingSytem, Platform
-} from './deviceService';
+} from './device';
 
 const { useState } = React
 

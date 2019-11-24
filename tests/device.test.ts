@@ -3,7 +3,7 @@
 
 
 
-import { getBrowserName, getOperatingSystem, getPlatform } from '../src/deviceService';
+import { getBrowserName, getOperatingSystem, getPlatform } from '../src/device';
 
 describe('application running on a Windows machine', () => {
     const ie9UserAgent = 'Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1)'
