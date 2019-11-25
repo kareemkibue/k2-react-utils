@@ -1,6 +1,6 @@
 
 type BrowserName = null | "chrome" | "chromium" | "safari" | "firefox" | "ie" | "ie mobile" | "edge" | "opera" | "opera mini"
-type OperatingSytem = null | "windows" | "mac os" | "android" | "ios";
+type OperatingSystem = null | "windows" | "mac os" | "android" | "ios";
 type Platform = "desktop" | "mobile"
 
 
@@ -8,7 +8,7 @@ type Platform = "desktop" | "mobile"
 
 
 
-const getOperatingSystem = (userAgent: string = navigator.userAgent): OperatingSytem => {
+const getOperatingSystem = (userAgent: string = navigator.userAgent): OperatingSystem => {
     if (userAgent.match(/Windows|Win64|Win32/i)) {
         return 'windows'
     }
@@ -75,5 +75,5 @@ export {
     getBrowserName,
 
     getOperatingSystem,
-    getPlatform, BrowserName, OperatingSytem, Platform
+    getPlatform, BrowserName, OperatingSystem, Platform
 }
