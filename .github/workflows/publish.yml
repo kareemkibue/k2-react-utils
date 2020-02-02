@@ -1,16 +1,15 @@
-name: Publish @soulfx/elektra library
+name: Publish library
 
 on:
   push:
-    paths: 
-      -  '*.json'
-      -  'src/**'
+    paths:
+      - "*.json"
+      - "src/**"
     branches:
       - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -18,23 +17,27 @@ jobs:
         node-version: [10.x]
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Install packages
-      run: |
-        yarn        
-    - name: Build
-      run: |
-        yarn build
-    - name: Test
-      run: |
-        yarn test 
-    - name: Publish
-      run: 
-        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
-        npm publish        
-      env:
-        CI: true
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install packages
+        run: |
+          yarn
+        env:
+          NPM_TOKEN: secrets.NPM_TOKEN
+      - name: Build
+        run: |
+          yarn build
+        env:
+          NPM_TOKEN: secrets.NPM_TOKEN
+      - name: Test
+        run: |
+          yarn test
+        env:
+          NPM_TOKEN: secrets.NPM_TOKEN
+#       - name: Publish
+#         run: npm run npm:publish
+#         env:
+#           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
