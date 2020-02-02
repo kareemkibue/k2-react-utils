@@ -1,9 +1,14 @@
 {
     "name": "k2-react-utils",
-    "version": "0.13.1",
+    "version": "0.15.0",
     "description": "A collection of handy React/JavaScript utilities",
     "main": "index.js",
     "types": "index.d.ts",
+    "keywords": [
+        "utils",
+        "react",
+        "hooks"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/kareemkibue/k2-react-utils.git"
@@ -24,16 +29,20 @@
     },
     "peerDependencies": {
         "react": "*",
+        "react-dom": "*"
+    },
+    "optionalDependencies": {
         "react-redux": "*",
         "xml-js": "*"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "4.2.4",
         "@testing-library/react": "9.3.2",
+        "@testing-library/react-hooks": "3.2.1",
         "@types/jest": "24.0.9",
         "@types/node": "12.12.8",
-        "@types/react": "16.9.11",
-        "@types/react-redux": "7.1.5",
+        "@types/react": "~16.9.11",
+        "@types/react-redux": "7.1.7",
         "@types/react-test-renderer": "16.9.1",
         "babel-jest": "24.9.0",
         "copyfiles": "2.1.1",
@@ -46,9 +55,9 @@
         "react-dom": "16.12.0",
         "react-redux": "7.1.3",
         "react-test-renderer": "16.12.0",
-        "redux": "4.0.4",
+        "redux": "4.0.5",
         "ts-jest": "24.1.0",
-        "typescript": "3.7.2",
+        "typescript": "3.7.5",
         "xml-js": "1.6.11"
     }
 }

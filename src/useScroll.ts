@@ -22,13 +22,15 @@ const useScroll = (): IUseScroll => {
     );
 
     useEffect(() => {
-        initWindowScrollListener();
+        window.addEventListener('scroll', getScrollPosition);
+
+        return () => {
+            window.removeEventListener('scroll', getScrollPosition);
+        }
     }, []);
 
-    const initWindowScrollListener = (): void => {
-        window.onscroll = () => {
-            setVerticalScrollPosition(getVerticalScrollPosition());
-        };
+    const getScrollPosition = (): void => {
+        setVerticalScrollPosition(getVerticalScrollPosition());
     };
 
     return {

@@ -1,17 +1,21 @@
-// import { connect as connectReactRedux } from 'react-redux';
+let reactRedux: any;
+
+try {
+    reactRedux = require('react-redux')
+} catch (error) {
+    reactRedux = null
+}
 
 /**
  * react-redux connect decorator implementation for Typescript
- * Suppressses @types/react-redux issue when using connect as a decorator
+ * suppresses @types/react-redux issue when using connect as a decorator
  */
 const connect = (mapStateToProps: any, mapDispatchToProps?: any, mergeProps?: any, options?: any) => {
-    try {
-        const reactRedux = require('react-redux');
-
+    if (reactRedux) {
         return (target: any) => (reactRedux.connect(mapStateToProps, mapDispatchToProps, mergeProps, options)(target) as any);
-    } catch (error) {
-        console.error(error)
     }
+
+    return;
 }
 
 
