@@ -4,12 +4,6 @@ import * as React from 'react';
 const { useEffect, useState } = React
 
 
-interface IUseViewport {
-    viewportWidth: number;
-    viewportHeight: number;
-    documentHeight: number;
-}
-
 const getViewportWidth = (): number => {
     const docClientWidth = document.documentElement
         ? document.documentElement.clientWidth
@@ -32,16 +26,18 @@ const getDocumentHeight = (): number => {
     return documentHeight;
 };
 
-const useViewport = (): IUseViewport => {
+const useViewport = () => {
     const [viewportWidth, setViewportWidth] = useState<number>(getViewportWidth());
     const [viewportHeight, setViewportHeight] = useState<number>(getViewportHeight());
     const [documentHeight, setDocumentHeight] = useState<number>(getDocumentHeight());
 
     useEffect(() => {
         window.addEventListener('resize', getWindowDimensions);
+        window.addEventListener('scroll', getScrollPosition);
 
         return () => {
             window.removeEventListener('resize', getWindowDimensions);
+            window.removeEventListener('scroll', getScrollPosition);
         }
     }, []);
 
@@ -51,12 +47,14 @@ const useViewport = (): IUseViewport => {
         setDocumentHeight(getDocumentHeight());
     };
 
-
+    const getScrollPosition = (): void => {
+        setDocumentHeight(getDocumentHeight());
+    };
 
     return {
-        viewportWidth,
-        viewportHeight,
         documentHeight,
+        viewportHeight,
+        viewportWidth,
     };
 };
 

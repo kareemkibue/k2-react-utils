@@ -1,6 +1,6 @@
 {
     "name": "k2-react-utils",
-    "version": "0.15.1",
+    "version": "0.15.2",
     "description": "A collection of handy React/JavaScript utilities",
     "main": "index.js",
     "types": "index.d.ts",
