@@ -36,7 +36,7 @@
         "xml-js": "*"
     },
     "devDependencies": {
-        "@testing-library/jest-dom": "5.11.0",
+        "@testing-library/jest-dom": "5.11.1",
         "@testing-library/react": "10.4.5",
         "@testing-library/react-hooks": "3.3.0",
         "@types/jest": "26.0.4",
