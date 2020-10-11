@@ -7,13 +7,6 @@ const { useState } = React
 
 
 
-interface IUseDevice {
-    browserName: BrowserName
-
-    operatingSystem: OperatingSystem
-    platform: Platform
-
-}
 
 
 
@@ -21,8 +14,7 @@ interface IUseDevice {
 
 
 
-
-const useDevice = (userAgent: string = navigator.userAgent): IUseDevice => {
+const useDevice = (userAgent: string = navigator.userAgent) => {
 
     const [browserName] = useState<BrowserName>(getBrowserName(userAgent));
     const [operatingSystem,] = useState<OperatingSystem>(getOperatingSystem(userAgent));
