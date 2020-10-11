@@ -1,6 +1,6 @@
 {
     "name": "k2-react-utils",
-    "version": "0.15.2",
+    "version": "0.15.3",
     "description": "A collection of handy React/JavaScript utilities",
     "main": "index.js",
     "types": "index.d.ts",
@@ -40,14 +40,14 @@
         "@testing-library/react": "11.0.4",
         "@testing-library/react-hooks": "3.4.2",
         "@types/jest": "26.0.14",
-        "@types/node": "14.11.2",
-        "@types/react": "~16.9.11",
+        "@types/node": "14.11.8",
+        "@types/react": "16.9.52",
         "@types/react-redux": "7.1.9",
         "@types/react-test-renderer": "16.9.3",
-        "babel-jest": "26.3.0",
+        "babel-jest": "26.5.2",
         "copyfiles": "2.4.0",
         "del-cli": "3.0.1",
-        "jest": "25.5.4",
+        "jest": "26.5.2",
         "jest-dom": "4.0.0",
         "jest-extended": "0.11.5",
         "npm-run-all": "4.1.5",
@@ -56,8 +56,8 @@
         "react-redux": "7.2.1",
         "react-test-renderer": "16.13.1",
         "redux": "4.0.5",
-        "ts-jest": "25.5.1",
-        "typescript": "3.9.7",
+        "ts-jest": "26.4.1",
+        "typescript": "4.0.3",
         "xml-js": "1.6.11"
     }
 }
