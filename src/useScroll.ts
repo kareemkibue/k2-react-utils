@@ -4,9 +4,7 @@ import * as React from 'react';
 const { useEffect, useState } = React
 
 
-interface IUseScroll {
-    verticalScrollPosition: number;
-}
+
 
 const getVerticalScrollPosition = (): number => {
     const documentElement = document.documentElement;
@@ -16,7 +14,7 @@ const getVerticalScrollPosition = (): number => {
     return documentElementScrollTop || window.scrollY;
 };
 
-const useScroll = (): IUseScroll => {
+const useScroll = () => {
     const [verticalScrollPosition, setVerticalScrollPosition] = useState<number>(
         getVerticalScrollPosition()
     );
