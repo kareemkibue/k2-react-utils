@@ -60,5 +60,8 @@
         "typescript": "4.2.4",
         "xml-js": "1.6.11"
     },
-    "resolutions": {}
+    "resolutions": {
+        "@types/react": "16.14.2",
+        "@types/react-dom": "16.9.9"
+    }
 }
