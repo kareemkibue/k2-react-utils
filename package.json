@@ -1,6 +1,6 @@
 {
     "name": "k2-react-utils",
-    "version": "0.15.4",
+    "version": "0.15.5",
     "description": "A collection of handy React/JavaScript utilities",
     "main": "index.js",
     "types": "index.d.ts",
@@ -19,7 +19,7 @@
         "start": "npm run tsc:watch",
         "tsc:watch": "tsc -w",
         "clean": "del-cli -f node_modules && del-cli -f yarn.lock && yarn",
-        "build": "del-cli -f .publish && tsc",
+        "build": "del-cli -f .publish && tsc -p tsconfig.prod.json",
         "test": "npx jest --coverage --passWithNoTests",
         "test:watch": "npx jest --watchAll --passWithNoTests",
         "npm:copy": "node_modules/.bin/copyfiles package.json yarn.lock readme.md .npmignore .publish",
